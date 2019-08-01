@@ -27,19 +27,19 @@ A JSON Schema corresponding to this data model can be found
 
 -   `source` : A sequence of characters giving the source of the entity data.
 
-    -   Attribute type: Text or URL
+    -   Attribute type: Property. Text or URL
     -   Optional
 
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: URL
+    -   Attribute type: Property. URL
     -   Optional
 
 -   `category` : Define the category of alert (Traffic jam, accidents, weather
     conditions, high level of pollutants)
 
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Allowed values:
         -   (`traffic`, `naturalDisaster`, `weather`, `environment`, `health`,
             `security`, `agriculture`)
@@ -47,7 +47,7 @@ A JSON Schema corresponding to this data model can be found
 
 -   `subCategory` : Describe the sub category of alert.
 
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Allowed values:
         -   (`trafficJam`, `carAccident`, `carWrongDirection`, `carStopped`,
             `pothole`, `roadClosed`, `roadWorks`, `hazardOnRoad`,
@@ -64,69 +64,68 @@ A JSON Schema corresponding to this data model can be found
             (for `health` category)
         -   (`suspiciousAction`, `robbery`, `assault`, `civilDisorder`,
             `buildingFire`, `forestFire`) (for `security` category)
-        -   (`noxiousWeed`, `snail`, `insect`, `rodent`, `bacteria`,
-            `microbe`, `fungus`,`mite`, `virus`, `nematodes`, `irrigation`,
+        -   (`noxiousWeed`, `snail`, `insect`, `rodent`, `bacteria`, `microbe`,
+            `fungus`,`mite`, `virus`, `nematodes`, `irrigation`,
             `fertilisation`) (for `agriculture` category)
     -   Optional
 
 -   `location` : Location of alert represented by a GeoJSON geometry.
 
-    -   Attribute type: `geo:json`.
+    -   Attribute type: GeoProperty. `geo:json`.
     -   Normative References: [rfc7946](https://tools.ietf.org/html/rfc7946)
     -   Mandatory if `address` is not present
 
 -   `address` : Civic address of `Alert`
 
-    -   Attribute type: [Address](https://schema.org/address)
+    -   Attribute type: Property. [Address](https://schema.org/address)
     -   Mandatory if `location` is not present.
 
 -   `dateIssued` : The date and time the alert was issued by the alert generator
     in ISO8601 UTC format.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime).
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime).
     -   Normative References: [ISO8601](https://www.iso.org/standard/40874.html)
     -   Mandatory
 
 -   `validFrom` : The start date of validity of the alert in ISO8601 UTC format.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime).
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime).
     -   Normative References: [ISO8601](https://www.iso.org/standard/40874.html)
     -   Optional
 
 -   `validTo` : The end date of validity of the alert in ISO8601 UTC format.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime).
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime).
     -   Normative References: [ISO8601](https://www.iso.org/standard/40874.html)
     -   Optional
 
 -   `description` : A description of alert (e.g. Traffic jam in Paseo de la
     Reforma. Emergency services at place).
 
-    -   Attribute type: [Description](https://schema.org/description)
+    -   Attribute type: Property. [Description](https://schema.org/description)
     -   Optional
 
 -   `alertSource` : reference to the source of the alert. For example, it could
     be a user of an application, a device, or a service.
 
-    -   Attribute type: [Text](https://schema.org/Text) or
+    -   Attribute type: Property. [Text](https://schema.org/Text) or
         [URL](https://schema.org/URL)
     -   Mandatory.
 
 -   `data` : used to carry additional data for the alert.
 
-    -   Attribute type: [StructuredValue](https://schema.org/StructuredValue)
+    -   Attribute type: Property. [StructuredValue](https://schema.org/StructuredValue)
     -   Optional.
 
 -   `severity` : define the level of gravity of a given alert.
-    -   Attribute type: [Text](https://schema.org/Text)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Allowed values:
         -   (`informational`, `low`, `medium`, `high`, `critical`)
     -   Optional.
 
-**Note**: JSON Schemas only capture the NGSI simplified representation, this
-means that to test the JSON schema examples with a
-[FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
-API implementation, you need to use the `keyValues` mode (`options=keyValues`).
+**Note**: JSON Schemas are intended to capture the data type and associated
+constraints of the different Attributes, regardless their final representation
+format in NGSI(v2, LD).
 
 ## Examples
 
@@ -197,6 +196,71 @@ Sample uses simplified representation for data consumers `?options=keyValues`
         "finalFrame": "120"
     },
     "severity": "informational"
+}
+```
+
+### LD Example
+
+Sample uses the NGSI-LD representation
+
+```json
+{
+    "id": "urn:ngsi-ld:Alert:Alert:1",
+    "type": "Alert",
+    "createdAt": "2019-06-06T12:06:06",
+    "modifiedAt": "2019-06-07T12:07:06",
+    "category": {
+        "type": "Property",
+        "value": "traffic"
+    },
+    "subCategory": {
+        "type": "Property",
+        "value": "trafficJam"
+    },
+    "validTo": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2017-01-02T10:25:55.00Z"
+        }
+    },
+    "description": {
+        "type": "Property",
+        "value": "The road is completely blocked for 3kms"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [-3.712247222222222, 40.423852777777775]
+        }
+    },
+    "dateIssued": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2017-01-02T09:25:55.00Z"
+        }
+    },
+    "alertSource": {
+        "type": "Property",
+        "value": "https://account.lab.fiware.org/users/8"
+    },
+    "validFrom": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2017-01-02T09:25:55.00Z"
+        }
+    },
+    "severity": {
+        "type": "Property",
+        "value": "high"
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
 }
 ```
 
