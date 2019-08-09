@@ -264,11 +264,6 @@ Sample uses the NGSI-LD representation
 }
 ```
 
-## Use it with a real service
-
-The model has been defined to support different scenarios inside
-[SmartSDK](http://smartsdk.eu) project.
-
 ## Open Issues
 
 T.B.D
