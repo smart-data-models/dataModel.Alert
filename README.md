@@ -19,10 +19,6 @@ direction.
 Some examples of context data are: type of alert (traffic, suspicious
 activities, and pollution, etc.), severity, location and so on.
 
-**Note**: JSON Schemas only capture the NGSI simplified representation, this
-means that to test the JSON schema examples with a
-[FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
-API implementation, you need to use the `keyValues` mode (`options=keyValues`).
 
 ## Examples of use
 
