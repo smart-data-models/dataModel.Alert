@@ -1,7 +1,7 @@
 components: 
   schemas: 
     Alert: 
-      $ref: "https://raw.githubusercontent.com/MohamedSadiq102/dataModel.Alert/master/alert/schema.yaml#/Alert"
+      $ref: "https://raw.githubusercontent.com/smart-data-model/dataModel.Alert/master/alert/schema.yaml#/Alert"
 info: 
   description: |
     This entity models an alert and could be used to send alerts related
