@@ -4,6 +4,8 @@ Alert:
   allOf:
     - $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/alert-schema.yaml#/AlertCommons
   type: object
   description: |
       This entity models an alert and could be used to send alerts related to traffic
@@ -19,3 +21,58 @@ Alert:
 
       Some examples of context data are: type of alert (traffic, weather, security,
       and pollution, etc.), severity, location and so on
+  properties: 
+    subCategory: 
+      type: string
+      anyOf:
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/definitions/TrafficAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/definitions/EnvironmentAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/definitions/AgriculturalAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-schema.yaml#/definitions/WeatherAlertCategories'
+        
+TrafficAlertCategories:
+  type: string
+  enum:
+    - trafficJam
+    - carAccident
+    - carWrongDirection
+    - carStopped
+    - pothole
+    - roadClosed
+    - roadWorks
+    - hazardOnRoad
+    - injuredBiker
+EnvironmentAlertCategories:
+  type: string
+  enum:           
+    - fireRisk
+    - avalancheRisk
+    - floodRisk
+    - airPollution
+    - waterPollution
+    - pollenConcentration
+    - asthmaAttack
+    - bumpedPatient
+    - fallenPatient
+    - heartAttack
+    - suspiciousAction
+    - robbery
+    - assault
+    - civilDisorder
+    - buildingFire
+    - forestFire
+AgriculturalAlertCategories:
+  type: string
+  enum:
+    - noxiousWeed
+    - snail
+    - insect
+    - rodent
+    - bacteria
+    - microbe
+    - fungus
+    - mite
+    - virus
+    - nematodes
+    - irrigation
+    - fertilisation
