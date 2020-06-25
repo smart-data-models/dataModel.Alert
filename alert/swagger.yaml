@@ -3,20 +3,33 @@ components:
   schemas: 
     Alert:
       $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/Alert'
+    AlertCategory:
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Alert/alert-schema.yaml#/AlertCategory
+    AlertSeverity:
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Alert/alert-schema.yaml#/AlertSeverity
     NaturalDisasterAlertCategories:
-      $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/NaturalDisasterAlertCategories'
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/NaturalDisasterAlertCategories
     HealthAlertCategories:
-      $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/HealthAlertCategories'
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/HealthAlertCategories
     SecurityAlertCategories:
-      $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/SecurityAlertCategories'
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/SecurityAlertCategories
     TrafficAlertCategories:
-      $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/TrafficAlertCategories'
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/TrafficAlertCategories
     EnvironmentAlertCategories:
-      $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/EnvironmentAlertCategories'
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/EnvironmentAlertCategories
     AgriculturalAlertCategories:
-      $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/AgriculturalAlertCategories'
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/AgriculturalAlertCategories
     WeatherAlertCategories:
-      $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-schema.yaml#/WeatherAlertCategories'
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Weather/weather-schema.yaml#/WeatherAlertCategories
 
 
 info: 
