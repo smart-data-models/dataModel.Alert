@@ -25,10 +25,10 @@ Alert:
     subCategory: 
       type: string
       anyOf:
-        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/definitions/TrafficAlertCategories'
-        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/definitions/EnvironmentAlertCategories'
-        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/definitions/AgriculturalAlertCategories'
-        - $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-schema.yaml#/definitions/WeatherAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/TrafficAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/EnvironmentAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/AgriculturalAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-schema.yaml#/WeatherAlertCategories'
         
 TrafficAlertCategories:
   type: string
