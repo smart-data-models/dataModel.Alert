@@ -3,8 +3,8 @@ components:
   schemas: 
     Alert:
       $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/Alert'
-    NaturalDisasterCategories:
-      $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/NaturalDisasterCategories'
+    NaturalDisasterAlertCategories:
+      $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/NaturalDisasterAlertCategories'
     HealthAlertCategories:
       $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/HealthAlertCategories'
     SecurityAlertCategories:
