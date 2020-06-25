@@ -25,6 +25,9 @@ Alert:
     subCategory: 
       type: string
       anyOf:
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/NaturalDisasterAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/HealthAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/SecurityAlertCategories'
         - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/TrafficAlertCategories'
         - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/EnvironmentAlertCategories'
         - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/AgriculturalAlertCategories'
@@ -42,19 +45,28 @@ TrafficAlertCategories:
     - roadWorks
     - hazardOnRoad
     - injuredBiker
-EnvironmentAlertCategories:
+NaturalDisasterAlertCategories:
   type: string
   enum:           
     - fireRisk
     - avalancheRisk
     - floodRisk
+EnvironmentAlertCategories:
+  type: string
+  enum:
     - airPollution
     - waterPollution
     - pollenConcentration
+HealthAlertCategories:
+  type: string
+  enum:
     - asthmaAttack
     - bumpedPatient
     - fallenPatient
     - heartAttack
+SecurityAlertCategories:
+  type: string
+  enum:
     - suspiciousAction
     - robbery
     - assault
