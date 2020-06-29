@@ -1,0 +1,89 @@
+AlertCommons:
+  type: object
+  properties:
+    alertSource:
+      description: Reference to the source of the alert. For example, it could be a user of an application, a device, or a service.
+      format: uri
+      type: string
+      x-ngsi: 
+        model: 
+          - "http://schema.org/Text"
+          - "http://schema.org/URL"
+    category:
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Alert/alert-model.yaml#/AlertCategory
+    dateIssued:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      description: The date and time the alert was issued by the alert generator in ISO8601 UTC format.
+      type: string
+      format: date-time
+    description:
+      $ref: >-
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
+    validFrom:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      format: date-time
+      description: The start date of validity of the alert in ISO8601 UTC format.
+    validTo:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      format: date-time
+      description: The end date of validity of the alert in ISO8601 UTC format.
+    severity:
+      $ref: >-
+        https://smart-data-models.github.io/dataModel.Alert/alert-model.yaml#/AlertSeverity
+    data:
+      type: object
+      description: used to carry additional data for the alert
+
+AlertCategory:
+  x-ngsi:
+    type: Property
+    model: 'https://schema.org/Text'
+  type: string
+  enum: 
+    - traffic
+    - naturalDisaster
+    - weather
+    - environment
+    - health
+    - security
+    - agriculture
+  description: |
+  
+    - `traffic`
+    - `naturalDisaster`
+    - `weather`
+    - `environment`
+    - `health`
+    - `security`
+    - `agriculture`
+
+AlertSeverity:
+  x-ngsi:
+    type: Property
+    model: 'https://schema.org/Text'
+  type: string
+  enum: 
+    - informational
+    - low
+    - medium
+    - high
+    - critical
+  description: |
+    define the level of gravity of a given alert.
+    
+      - `informational`
+      - `low`
+      - `medium`
+      - `high`
+      - `critical`
+  
+  
