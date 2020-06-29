@@ -11,7 +11,7 @@ AlertCommons:
           - "http://schema.org/URL"
     category:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/alert-schema.yaml#/AlertCategory
+        https://smart-data-models.github.io/dataModel.Alert/alert-model.yaml#/AlertCategory
     dateIssued:
       x-ngsi:
         type: Property
@@ -21,7 +21,7 @@ AlertCommons:
       format: date-time
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     validFrom:
       x-ngsi:
         type: Property
@@ -38,7 +38,7 @@ AlertCommons:
       description: The end date of validity of the alert in ISO8601 UTC format.
     severity:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/alert-schema.yaml#/AlertSeverity
+        https://smart-data-models.github.io/dataModel.Alert/alert-model.yaml#/AlertSeverity
     data:
       type: object
       description: used to carry additional data for the alert

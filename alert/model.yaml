@@ -3,9 +3,9 @@ Alert:
     - id
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/alert-schema.yaml#/AlertCommons
+        https://smart-data-models.github.io/dataModel.Alert/alert-model.yaml#/AlertCommons
   type: object
   description: |
       This entity models an alert and could be used to send alerts related to traffic
@@ -25,13 +25,13 @@ Alert:
     subCategory: 
       type: string
       anyOf:
-        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/NaturalDisasterAlertCategories'
-        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/HealthAlertCategories'
-        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/SecurityAlertCategories'
-        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/TrafficAlertCategories'
-        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/EnvironmentAlertCategories'
-        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/AgriculturalAlertCategories'
-        - $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-schema.yaml#/WeatherAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/NaturalDisasterAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/HealthAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/SecurityAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/TrafficAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/EnvironmentAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/AgriculturalAlertCategories'
+        - $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherAlertCategories'
         
 TrafficAlertCategories:
   type: string

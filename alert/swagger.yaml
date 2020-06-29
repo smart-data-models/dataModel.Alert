@@ -2,34 +2,34 @@
 components: 
   schemas: 
     Alert:
-      $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/Alert'
+      $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/Alert'
     AlertCategory:
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Alert/alert-schema.yaml#/AlertCategory
+        https://smart-data-models.github.io/dataModel.Alert/alert-model.yaml#/AlertCategory
     AlertSeverity:
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Alert/alert-schema.yaml#/AlertSeverity
+        https://smart-data-models.github.io/dataModel.Alert/alert-model.yaml#/AlertSeverity
     NaturalDisasterAlertCategories:
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/NaturalDisasterAlertCategories
+        https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/NaturalDisasterAlertCategories
     HealthAlertCategories:
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/HealthAlertCategories
+        https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/HealthAlertCategories
     SecurityAlertCategories:
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/SecurityAlertCategories
+        https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/SecurityAlertCategories
     TrafficAlertCategories:
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/TrafficAlertCategories
+        https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/TrafficAlertCategories
     EnvironmentAlertCategories:
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/EnvironmentAlertCategories
+        https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/EnvironmentAlertCategories
     AgriculturalAlertCategories:
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Alert/alert/schema.yaml#/AgriculturalAlertCategories
+        https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/AgriculturalAlertCategories
     WeatherAlertCategories:
       $ref: >-
-        https://smart-data-models.github.io/dataModel.Weather/weather-schema.yaml#/WeatherAlertCategories
+        https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherAlertCategories
 
 
 info: 
@@ -71,12 +71,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/alert/example-1.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Alert/alert/example-1.json"
                 normalized: 
                     summary: "Normalized NGSI-LD"
                     value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/alert/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Alert/alert/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
