@@ -2,29 +2,29 @@ description: This is a compilation list of all CONTRIBUTORS across different obj
 contributors:
 -
  name: Jose M.
- surname:  Cantera
+ surname: Cantera
  mail: jmcanterafonseca4github@gmail.com
  organization: CanteraFonseca.EU
  project: 
  comments: 
 -
- name: Nikos
- surname:  Kalatzis
- mail: nikosk@cn.ntua.gr
- organization: Neuropublic S.A. & NTUA
- project: 
- comments: 
--
  name: Dmitrii
- surname:  Demin
+ surname: Demin
  mail: mail@demin.co
- organization: None
+ organization: 
  project: 
  comments: 
 -
  name: Jason
- surname:  Fox
- mail: None
- organization: @Fiware 
+ surname: Fox
+ mail:
+ organization: Fiware 
+ project: 
+ comments: 
+-
+ name: Nikos
+ surname: Kalatzis
+ mail: nikosk@cn.ntua.gr
+ organization: Neuropublic S.A. & NTUA
  project: 
  comments: 
