@@ -35,6 +35,7 @@ alert:
         - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/EnvironmentAlertCategories'
         - $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/AgriculturalAlertCategories'
         - $ref: 'https://smart-data-models.github.io/dataModel.Weather/weather-model.yaml#/WeatherAlertCategories'
+      description: ''  
         
 TrafficAlertCategories:
   type: string
