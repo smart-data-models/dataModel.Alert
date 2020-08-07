@@ -1,0 +1,2 @@
+"id_", "type_", "category_", "subCategory_", "severity_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "dateIssued_", "validFrom_", "validTo_", "description_", "alertSource_"
+"Alert:1", "Alert", "traffic", "trafficJam", "high", "Point", "-3.712247222222222", "40.423852777777775", "2017-01-02T09:25:55.00Z", "2017-01-02T09:25:55.00Z", "2017-01-02T10:25:55.00Z", "The road is completely blocked for 3kms", "https://account.lab.fiware.org/users/8"
