@@ -1,2 +1,0 @@
-"id", "type", "dateCreated__value", "dateModified__value", "category__value", "subCategory__value", "validTo__value", "description__value", "location__value__coordinates", "dateIssued__value", "alertSource__value", "validFrom__value", "severity__value"
-"Alert:1", "Alert", "2019-06-06T12:06:06", "2019-06-07T12:07:06", "traffic", "trafficJam", "2017-01-02T10:25:55.00Z", "The road is completely blocked for 3kms", "[-3.712247222222222, 40.423852777777775]", "2017-01-02T09:25:55.00Z", "https://account.lab.fiware.org/users/8", "2017-01-02T09:25:55.00Z", "high"
