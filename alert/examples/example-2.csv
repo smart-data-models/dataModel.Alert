@@ -1,2 +1,0 @@
-"id", "type", "category", "subCategory", "location__coordinates", "dateIssued", "description", "alertSource", "data__videoURL", "data__initialFrame", "data__finalFrame", "severity"
-"VisualEvent123", "Alert", "security", "robbery", "[-3.712247222222222, 40.423852777777775]", "2017-04-25T09:25:55.00Z", "Potential robbery in main building", "Camera1234", "www.smartsecurity.com/video123.mp4", "80", "120", "informational"
