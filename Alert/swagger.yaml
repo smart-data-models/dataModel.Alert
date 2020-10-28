@@ -5,7 +5,7 @@
 components: 
   schemas: 
     Alert:
-      $ref: 'https://smart-data-models.github.io/dataModel.Alert/alert/model.yaml#/Alert'
+      $ref: 'https://smart-data-models.github.io/dataModel.Alert/Alert/model.yaml#/Alert'
     AlertCategory:
       $ref: >-
         https://smart-data-models.github.io/dataModel.Alert/alert-model.yaml#/AlertCategory
@@ -74,12 +74,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.Alert/alert/examples/example-1.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Alert/Alert/examples/example-1.json"
                 normalized: 
                     summary: "Normalized NGSI-LD"
                     value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.Alert/alert/examples/example-normalized.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Alert/Alert/examples/example-normalized.jsonld"
           description: OK
       tags: 
         - ngsi-ld

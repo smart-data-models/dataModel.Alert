@@ -6,7 +6,7 @@ AlertCommons:
   type: object
   properties:
     alertSource:
-      description: Reference to the source of the alert. For example, it could be a user of an application, a device, or a service.
+      description: Reference to the source of the Alert. For example, it could be a user of an application, a device, or a service.
       format: uri
       type: string
       x-ngsi: 
@@ -20,7 +20,7 @@ AlertCommons:
       x-ngsi:
         type: Property
         model: 'https://schema.org/DateTime'
-      description: The date and time the alert was issued by the alert generator in ISO8601 UTC format.
+      description: The date and time the Alert was issued by the Alert generator in ISO8601 UTC format.
       type: string
       format: date-time
     description:
@@ -32,20 +32,20 @@ AlertCommons:
         model: 'https://schema.org/DateTime'
       type: string
       format: date-time
-      description: The start date of validity of the alert in ISO8601 UTC format.
+      description: The start date of validity of the Alert in ISO8601 UTC format.
     validTo:
       x-ngsi:
         type: Property
         model: 'https://schema.org/DateTime'
       type: string
       format: date-time
-      description: The end date of validity of the alert in ISO8601 UTC format.
+      description: The end date of validity of the Alert in ISO8601 UTC format.
     severity:
       $ref: >-
         https://smart-data-models.github.io/dataModel.Alert/alert-model.yaml#/AlertSeverity
     data:
       type: object
-      description: used to carry additional data for the alert
+      description: used to carry additional data for the Alert
 
 AlertCategory:
   x-ngsi:
