@@ -47,7 +47,7 @@
         "type": {
           "type": "string",
           "enum": ["Alert"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity type"
         }
       }
     }
