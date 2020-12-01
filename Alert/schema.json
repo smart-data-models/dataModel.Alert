@@ -87,26 +87,11 @@
       }
     }
   ],
-  "oneOf": [
-    {
-      "required": [
-        "id",
-        "type",
-        "location",
-        "alertSource",
-        "category",
-        "dateIssued"
-      ]
-    },
-    {
-      "required": [
-        "id",
-        "type",
-        "address",
-        "alertSource",
-        "category",
-        "dateIssued"
-      ]
-    }
+  "required": [
+    "id",
+    "type",
+    "alertSource",
+    "category",
+    "dateIssued"
   ]
 }
