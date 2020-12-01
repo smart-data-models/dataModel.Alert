@@ -12,60 +12,61 @@
           "enum": [
             "Alert"
           ],
-          "description": "Property. NGSI Entity type",
-          "description": {
-            "type": "string",
-            "description": "Property. Type of the Entity"
-          },
-          "dateIssued": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Property. Model:'https://schema.org/DateTime'"
-          },
-          "validFrom": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Property. Model:'https://schema.org/DateTime'. "
-          },
-          "validTo": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Property. Model:'https://schema.org/DateTime'"
-          },
-          "severity": {
-            "type": "string",
-            "enum": [
-              "informational",
-              "low",
-              "medium",
-              "high",
-              "critical"
-            ],
-            "description": "Property. "
-          },
-          "category": {
-            "type": "string",
-            "enum": [
-              "traffic",
-              "naturalDisaster",
-              "weather",
-              "environment",
-              "health",
-              "security",
-              "agriculture"
-            ],
-            "description": "Property. "
-          },
-          "alertSource": {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
-            "description": "Relationship. "
-          },
-          "data": {
-            "type": "object",
-            "description": "Property. "
-          }
+          "description": "Property. NGSI Entity type"
+        },
+        "description": {
+          "type": "string",
+          "description": "Property. Description of the Entity"
+        },
+        "dateIssued": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/DateTime'"
+        },
+        "validFrom": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/DateTime'"
+        },
+        "validTo": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'https://schema.org/DateTime'"
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "informational",
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ],
+          "description": "Property. "
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "traffic",
+            "naturalDisaster",
+            "weather",
+            "environment",
+            "health",
+            "security",
+            "agriculture"
+          ],
+          "description": "Property. "
+        },
+        "alertSource": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
+          "description": "Relationship. "
+        },
+        "data": {
+          "type": "object",
+          "description": "Property. "
         }
       }
     }
   }
 }
+
