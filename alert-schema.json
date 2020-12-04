@@ -12,7 +12,7 @@
           "enum": [
             "Alert"
           ],
-          "description": "Property. NGSI Entity type"
+          "description": "Property. NGSI Entity type. It has to be Alert."
         },
         "description": {
           "type": "string",
