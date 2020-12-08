@@ -55,7 +55,7 @@
             "security",
             "agriculture"
           ],
-          "description": "Property. Category of the Alert"
+          "description": "Property. Category of the Alert. Enum:'traffic, naturalDisaster, weather, environment, health, security, agriculture'"
         },
         "alertSource": {
           "anyOf": [
@@ -77,13 +77,6 @@
         "data": {
           "type": "object",
           "description": "Property. Payload containing the data retrieved."
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "Alert"
-          ],
-          "description": "Property. NGSI Entity type. It has to be Alert"
         }
       }
     }
