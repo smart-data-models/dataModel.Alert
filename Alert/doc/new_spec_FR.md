@@ -1,11 +1,15 @@
 Entité : Alerte  
 ===============  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.Alert/blob/master/Alert/LICENSE.md)  
 Description globale : **Alerte générée par un utilisateur ou un appareil dans un lieu donné**  
 
 ## Liste des biens  
 
-- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`:   - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `subCategory`:   - `type`: Type de l'entité}  ## Modèle de données description des biens  
+- `address`: L'adresse postale.  - `alertSource`: Source de l'alerte  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `category`: Catégorie de l'alerte. Enum : "trafic, catastrophe naturelle, météo, environnement, santé, sécurité, agriculture".  - `data`: Charge utile contenant les données récupérées.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateIssued`: La date et l'heure d'émission de l'article au format ISO8601 UTC.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Description de l'entité  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `severity`: Gravité de l'alarme  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `subCategory`: Décrivez la sous-catégorie de signalement. Enum :Accident de la route, accident de voiture, mauvaise direction, voiture bloquée, nid de poule, route fermée, travaux routiers, danger sur la route, motard blessé, inondation, tsunami, événement côtier, tremblement de terre, précipitations, haute température, basse température, vague de chaleur, vague de froid, glace, neige, vent, brouillard, tornade, cyclone tropical, ouragan, neige/glace, orages, risque d'incendie, Risque d'avalanche, risque d'inondation, pollution de l'air, pollution de l'eau, concentration de pollen, asthmeAttaque, patient heurté, patient tombé, attaque cardiaque, action suspecte, vol, agression, troubles civils, incendie de bâtiment, incendie de forêt, mauvaise herbe, escargot, insecte, rongeur, bactérie, microbe, champignon, acarien, virus, nématodes, irrigation, fertilisation  - `type`: Type d'entité NGSI. Il doit s'agir d'Alert.  - `validFrom`: Le début de la période de validité de cette prévision au format ISO8601  - `validTo`: La fin de la période de validité de cette prévision au format ISO8601    
+Propriétés requises  
+- `alertSource`  - `category`  - `dateIssued`  - `id`  - `type`    
+Cette entité modélise une alerte et pourrait être utilisée pour envoyer des alertes liées aux embouteillages, aux accidents, aux conditions météorologiques, au niveau élevé de polluants, etc. L'objectif du modèle est de permettre la génération de notifications pour un utilisateur ou de déclencher d'autres actions, sur la base de ces alertes. Une alerte est générée par une situation spécifique. La principale caractéristique d'une alerte est qu'elle n'est pas prévisible et qu'il ne s'agit pas de données récurrentes. Cela signifie qu'une alerte peut être un accident ou une mesure de niveau élevé de polluants, mais aussi la chute d'un patient ou d'une voiture roulant en sens inverse.  Voici quelques exemples de données contextuelles : type d'alerte (trafic, météo, sécurité et pollution, etc.), gravité, emplacement, etc.  
+## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -16,25 +20,62 @@ Alert:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
+    alertSource:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Source of the alert'    
+      type: Relationship    
+      x-ngsi:    
+        model: http://schema.org/URL.    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    category:    
+      description: 'Category of the Alert. Enum:''traffic, naturalDisaster, weather, environment, health, security, agriculture'''    
+      enum:    
+        - traffic    
+        - naturalDisaster    
+        - weather    
+        - environment    
+        - health    
+        - security    
+        - agriculture    
+      type: Property    
+    data:    
+      description: 'Payload containing the data retrieved.'    
       type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
@@ -43,12 +84,18 @@ Alert:
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
       type: Property    
+    dateIssued:    
+      description: 'The date and time the item was issued in ISO8601 UTC format.'    
+      format: date-time    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
       type: Property    
     description:    
-      description: 'A description of this item'    
+      description: 'Description of the Entity'    
       type: Property    
     id:    
       anyOf: &alert_-_properties_-_owner_-_items_-_anyof    
@@ -60,6 +107,8 @@ Alert:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -214,8 +263,10 @@ Alert:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *alert_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -224,6 +275,16 @@ Alert:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
+    severity:    
+      description: 'Severity of the Alarm'    
+      enum:    
+        - informational    
+        - low    
+        - medium    
+        - high    
+        - critical    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
@@ -285,71 +346,53 @@ Alert:
             - nematodes    
             - irrigation    
             - fertilisation    
-        - enum:    
-            - rainfall    
-            - highTemperature    
-            - lowTemperature    
-            - heatWave    
+        - description: 'Property. Weather categories'    
+          enum:    
+            - avalanches    
+            - coastalEvent    
             - coldWave    
-            - ice    
-            - snow    
-            - wind    
-            - fog    
             - flood    
-            - tsunami    
-            - tornado    
-            - tropicalCyclone    
+            - fog    
+            - forestFire    
+            - heatWave    
+            - highTemperature    
             - hurricane    
+            - ice    
+            - lowTemperature    
+            - rainfall    
+            - rain/flood    
+            - snow    
             - snow/ice    
             - thunderstorms    
-            - coastalEvent    
-            - forestFire    
-            - avalanches    
-            - rain/flood    
-      type: string    
+            - tornado    
+            - tropicalCyclone    
+            - tsunami    
+            - wind    
+      description: 'Describe the sub category of alert. Enum:''trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, avalancheRisk, floodRisk, airPollution, waterPollution, pollenConcentration, asthmaAttack, bumpedPatient, fallenPatient, heartAttack, suspiciousAction, robbery, assault, civilDisorder, buildingFire, forestFire, noxiousWeed, snail, insect, rodent, bacteria, microbe, fungus,mite, virus, nematodes, irrigation, fertilisation'    
+      type: Property    
     type:    
-      alertSource:    
-        anyOf: *alert_-_properties_-_owner_-_items_-_anyof    
-      category:    
-        description: 'Property. '    
-        enum:    
-          - traffic    
-          - naturalDisaster    
-          - weather    
-          - environment    
-          - health    
-          - security    
-          - agriculture    
-        type: string    
-      data:    
-        description: 'Property. '    
-        type: object    
-      dateIssued:    
-        description: 'Property. Model:''https://schema.org/DateTime'''    
-        format: date-time    
-        type: string    
-      description: 'Type of the Entity''}'    
+      description: 'NGSI Entity type. It has to be Alert.'    
       enum:    
         - Alert    
-      severity:    
-        description: 'Property. '    
-        enum:    
-          - informational    
-          - low    
-          - medium    
-          - high    
-          - critical    
-        type: string    
-      type: '{''type'': ''string'', ''description'': ''Property'    
-      validFrom:    
-        description: 'Property. Model:''https://schema.org/DateTime''. '    
-        format: date-time    
-        type: string    
-      validTo:    
-        description: 'Property. Model:''https://schema.org/DateTime'''    
-        format: date-time    
-        type: string    
-  required: []    
+      type: Property    
+    validFrom:    
+      description: 'The start of the validity period for this forecast as a ISO8601 format'    
+      format: date-time    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
+    validTo:    
+      description: 'The end of the validity period for this forecast as a ISO8601 format'    
+      format: date-time    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/DateTime    
+  required:    
+    - id    
+    - type    
+    - alertSource    
+    - category    
+    - dateIssued    
   type: object    
 ```  
 </details>    
@@ -375,7 +418,7 @@ Alert:
 }  
 ```  
 #### Alerte NGSI V2 normalisée Exemple  
-Voici un exemple d'alerte au format JSON normalisé. Il est compatible avec la version 2 du NGSI lorsque l'on utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'alerte au format JSON normalisé. Ce format est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "Alert:1",  
@@ -425,7 +468,7 @@ Alert:
 }  
 ```  
 #### Alerte valeurs clés NGSI-LD Exemple  
-Voici un exemple d'alerte au format JSON-LD en tant que valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'alerte au format JSON-LD en tant que valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
