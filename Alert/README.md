@@ -21,6 +21,10 @@ and pollution, etc.), severity, location and so on
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Alert/Alert/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Alert/blob/master/Alert/doc/spec.md)
+
+Link to the [specification in Spanish](https://github.com/smart-data-models/dataModel.Alert/blob/master/Alert/doc/spec_ES.md)
+
+Link to the [specification in French](https://github.com/smart-data-models/dataModel.Alert/blob/master/Alert/doc/spec_FR.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.Alert/Alert/examples/example.json) (keyvalues) for NGSI v2
