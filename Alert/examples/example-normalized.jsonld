@@ -1,61 +1,34 @@
 {
-    "id": "urn:ngsi-ld:Alert:Alert:1",
-    "type": "Alert",
-    "createdAt": "2019-06-06T12:06:06",
-    "modifiedAt": "2019-06-07T12:07:06",
-    "category": {
-        "type": "Property",
-        "value": "traffic"
-    },
-    "subCategory": {
-        "type": "Property",
-        "value": "trafficJam"
-    },
-    "validTo": {
-        "type": "Property",
-        "value": {
-            "@type": "DateTime",
-            "@value": "2017-01-02T10:25:55.00Z"
-        }
-    },
-    "description": {
-        "type": "Property",
-        "value": "The road is completely blocked for 3kms"
-    },
-    "location": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                -3.712247222222222,
-                40.423852777777775
-            ]
-        }
-    },
-    "dateIssued": {
-        "type": "Property",
-        "value": {
-            "@type": "DateTime",
-            "@value": "2017-01-02T09:25:55.00Z"
-        }
-    },
-    "alertSource": {
-        "type": "Property",
-        "value": "https://account.lab.fiware.org/users/8"
-    },
-    "validFrom": {
-        "type": "Property",
-        "value": {
-            "@type": "DateTime",
-            "@value": "2017-01-02T09:25:55.00Z"
-        }
-    },
-    "severity": {
-        "type": "Property",
-        "value": "high"
-    },
-    "@context": [
-        "https://schema.lab.fiware.org/ld/context",
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-    ]
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld",
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+  ],
+  "alertSource": "https://account.lab.fiware.org/users/8",
+  "category": "traffic",
+  "createdAt": "2019-06-06T12:06:06",
+  "dateIssued": {
+    "@type": "DateTime",
+    "@value": "2017-01-02T09:25:55.00Z"
+  },
+  "description": "The road is completely blocked for 3kms",
+  "id": "urn:ngsi-ld:Alert:Alert:1",
+  "location": {
+    "coordinates": [
+      -3.712247222222222,
+      40.423852777777775
+    ],
+    "type": "Point"
+  },
+  "modifiedAt": "2019-06-07T12:07:06",
+  "severity": "high",
+  "subCategory": "trafficJam",
+  "type": "Alert",
+  "validFrom": {
+    "@type": "DateTime",
+    "@value": "2017-01-02T09:25:55.00Z"
+  },
+  "validTo": {
+    "@type": "DateTime",
+    "@value": "2017-01-02T10:25:55.00Z"
+  }
 }
