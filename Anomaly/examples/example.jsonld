@@ -3,64 +3,21 @@
   "type": "Anomaly",
   "createdAt": "2021-01-14T15:45:00Z",
   "modifiedAt": "2021-01-14T15:45:00Z",
-  "detectedBy": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"
-  },
-  "anomalousProperty": {
-    "type": "Property",
-    "value": "Pressure"
-  },
-  "dateDetected": {
-    "type": "Property",
-    "value": "2021-01-14T15:45:00Z"
-  },
+  "detectedBy": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20",
+  "anomalousProperty": "Pressure",
+  "dateDetected": "2021-01-14T15:45:00Z",
   "thresholdBreach": [
     {
-      "datasetId": "urn:ngsi-ld:Dataset:Breach1",
-      "value": {
-        "dateObserved": {
-          "type": "Property",
-          "value": "2021-01-14T15:30:00Z"
-        },
-        "measuredValue": {
-          "type": "Property",
-          "value": "18.91",
-          "unitCode": "MTR"
-        },
-        "thresholdType": {
-          "type": "Property",
-          "value": "LOWER"
-        },
-        "thresholdValue": {
-          "type": "Property",
-          "value": "20",
-          "unitCode": "MTR"
-        }
-      }
+      "dateObserved": "2021-01-14T15:30:00Z",
+      "measuredValue": "18.91",
+      "thresholdType": "LOWER",
+      "thresholdValue": 20
     },
     {
-      "datasetId": "urn:ngsi-ld:Dataset:Breach2",
-      "value": {
-        "dateObserved": {
-          "type": "Property",
-          "value": "2021-01-14T15:45:00Z"
-        },
-        "measuredValue": {
-          "type": "Property",
-          "value": "18.91",
-          "unitCode": "MTR"
-        },
-        "thresholdType": {
-          "type": "Property",
-          "value": "LOWER"
-        },
-        "thresholdValue": {
-          "type": "Property",
-          "value": "20",
-          "unitCode": "MTR"
-        }
-      }
+      "dateObserved": "2021-01-14T15:45:00Z",
+      "measuredValue": "18.91",
+      "thresholdType": "LOWER",
+      "thresholdValue": 20
     }
   ],
   "@context": [
