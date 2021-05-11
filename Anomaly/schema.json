@@ -1,6 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://smart-data-models.github.io/incubated/Anomaly/schema.json",
+    "$schemaVersion": "0.0.2",
     "title": "Anomaly",
     "description": "This entity contains a harmonised description of an anomaly.",
     "allOf": [
@@ -66,6 +67,5 @@
         "type",
         "anomalousProperty",
         "dateDetected"
-    ],
-    "$schemaVersion": "0.0.1"
+    ]
 }
