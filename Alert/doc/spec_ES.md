@@ -1,15 +1,16 @@
 Entidad: Alerta  
 ===============  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.Alert/blob/master/Alert/LICENSE.md)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Una alerta generada por un usuario o dispositivo en un lugar determinado**  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal.  - `alertSource`: Fuente de la alerta  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: Categoría de la Alerta. Enum:'tráfico, desastre natural, clima, medio ambiente, salud, seguridad, agricultura'.  - `data`: Carga útil que contiene los datos recuperados.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateIssued`: La fecha y la hora en que se emitió el artículo en formato ISO8601 UTC.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `description`: Descripción de la entidad  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `severity`: Gravedad de la alarma  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `subCategory`: Describa la subcategoría de alerta. Enumera:tráficoAtasco, accidente de coche, dirección equivocada, coche detenido, bache, carretera cerrada, obras de carretera, peligro en carretera, heridos ciclistas, inundaciones, tsunamis, eventos costeros, terremotos, lluvias, altas y bajas temperaturas, olas de calor, olas de frío, hielo, nieve, viento, niebla, tornados, ciclones tropicales, huracanes, nieve y hielo, tormentas eléctricas, riesgo de incendio, AvalanchaRiesgo, inundaciónRiesgo, aireContaminación, aguaContaminación, polenConcentración, asmaAtaque, choquesPaciente, caídoPaciente, corazónAtaque, sospechosoAcción, robo, asalto, desorden civil, edificioIncendio, incendio forestalIncendio, nocivoMaleza, caracol, insecto, roedor, bacteria, microbio, hongo, ácaro, virus, nemátodos, irrigación, fertilización  - `type`: Tipo de entidad NGSI. Tiene que ser Alerta.  - `validFrom`: El inicio del período de validez de esta previsión en formato ISO8601  - `validTo`: El final del período de validez de esta previsión en formato ISO8601    
+- `address`: La dirección postal  - `alertSource`: Fuente de la alerta  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: Categoría de la alerta. Enum:'tráfico, naturalDisaster, meteorología, medio ambiente, salud, seguridad, agricultura'  - `data`: Carga útil que contiene los datos recuperados.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateIssued`: La fecha y la hora en que se emitió el artículo en formato ISO8601 UTC.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Descripción de la entidad  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `severity`: Gravedad de la alarma  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `subCategory`: Describe la subcategoría de la alerta. Enum:'trafficJam, carAccident, carWrongDirection, carStopped, bache, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, tormentas eléctricas, riesgo de incendio, riesgo de avalancha, riesgo de inundación, contaminación del aire, contaminación del agua, concentración de polen, ataque de asma, paciente golpeado, paciente caído, ataque al corazón, acción sospechosa, robo, asalto, disturbios civiles, incendio de un edificio, incendio forestal, hierba nociva, caracol, insecto, roedor, bacteria, microbio, hongo, ácaro, virus, nematodos, riego, fertilización  - `type`: Tipo de entidad NGSI. Tiene que ser Alerta.  - `validFrom`: El inicio del período de validez de esta previsión en formato ISO8601  - `validTo`: El final del período de validez de esta previsión en formato ISO8601    
 Propiedades requeridas  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `type`    
-Esta entidad modela una alerta y podría utilizarse para enviar alertas relacionadas con atascos de tráfico, accidentes, condiciones meteorológicas, alto nivel de contaminantes, etc. El propósito del modelo es apoyar la generación de notificaciones para un usuario o desencadenar otras acciones, basadas en dichas alertas. Una alerta es generada por una situación específica. Las principales características de una alerta son que no es predecible y que no se trata de un dato recurrente. Esto significa que una alerta podría ser un accidente o una medida de alto nivel de contaminantes, además podría ser la caída de un paciente o un automóvil que circula en sentido contrario.  Algunos ejemplos de datos contextuales son: tipo de alerta (tráfico, clima, seguridad y contaminación, etc.), gravedad, ubicación, etc.  
-## Modelo de datos Descripción de las propiedades  
+Esta entidad modela una alerta y podría utilizarse para enviar alertas relacionadas con atascos, accidentes, condiciones meteorológicas, alto nivel de contaminantes, etc. El propósito del modelo es apoyar la generación de notificaciones para un usuario o desencadenar otras acciones, basadas en tales alertas. Una alerta es generada por una situación específica. Las principales características de una alerta es que no es predecible y no es un dato recurrente. Esto significa que una alerta podría ser un accidente o una medida de alto nivel de contaminantes, además podría ser la caída de un paciente o un coche conduciendo en dirección contraria.  Algunos ejemplos de datos contextuales son: el tipo de alerta (tráfico, clima, seguridad y contaminación, etc.), la gravedad, la ubicación, etc.  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -17,30 +18,29 @@ Alert:
   description: 'An alert generated by a user or device in a given location'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alertSource:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -269,8 +269,8 @@ Alert:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -300,6 +300,10 @@ Alert:
             - roadWorks    
             - hazardOnRoad    
             - injuredBiker    
+            - pedestrianOnRoad    
+            - bikerOnRoad    
+            - tramApproaching    
+            - crowdRisk    
             - flood    
             - tsunami    
             - coastalEvent    
@@ -307,6 +311,10 @@ Alert:
             - rainfall    
             - highTemperature    
             - lowTemperature    
+            - lowHumidity    
+            - highHumidity    
+            - highAtmosphericPressure    
+            - losAtmosphericPressure    
             - heatWave    
             - coldWave    
             - ice    
@@ -317,6 +325,7 @@ Alert:
             - tropicalCyclone    
             - hurricane    
             - snow/ice    
+            - badSeaState    
             - thunderstorms    
             - fireRisk    
             - avalancheRisk    
@@ -346,7 +355,7 @@ Alert:
             - nematodes    
             - irrigation    
             - fertilisation    
-        - description: 'Property. Weather categories'    
+        - description: 'Property. Weather categories. Enum:'' avalanches,coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind'''    
           enum:    
             - avalanches    
             - coastalEvent    
@@ -360,15 +369,15 @@ Alert:
             - ice    
             - lowTemperature    
             - rainfall    
-            - rain/flood    
+            - rain_flood    
             - snow    
-            - snow/ice    
+            - snow_ice    
             - thunderstorms    
             - tornado    
             - tropicalCyclone    
             - tsunami    
             - wind    
-      description: 'Describe the sub category of alert. Enum:''trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, avalancheRisk, floodRisk, airPollution, waterPollution, pollenConcentration, asthmaAttack, bumpedPatient, fallenPatient, heartAttack, suspiciousAction, robbery, assault, civilDisorder, buildingFire, forestFire, noxiousWeed, snail, insect, rodent, bacteria, microbe, fungus,mite, virus, nematodes, irrigation, fertilisation'    
+      description: 'Describe the sub category of alert. Enum:''trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, avalancheRisk, floodRisk, airPollution, waterPollution, pollenConcentration, asthmaAttack, bumpedPatient, fallenPatient, heartAttack, suspiciousAction, robbery, assault, civilDisorder, buildingFire, forestFire, noxiousWeed, snail, insect, rodent, bacteria, microbe, fungus,mite, virus, nematodes, irrigation, fertilisation'    
       type: Property    
     type:    
       description: 'NGSI Entity type. It has to be Alert.'    
@@ -396,9 +405,9 @@ Alert:
   type: object    
 ```  
 </details>    
-## Ejemplo de cargas útiles  
-#### Alerta NGSI V2 valores clave Ejemplo  
-Aquí hay un ejemplo de una Alerta en formato JSON como valores clave. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
+## Ejemplo de carga útil  
+#### Alerta NGSI-v2 valores-clave Ejemplo  
+Aquí hay un ejemplo de una Alerta en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "Alert:1",  
@@ -417,8 +426,8 @@ Alert:
   "alertSource": "https://account.lab.fiware.org/users/8"  
 }  
 ```  
-#### Alerta NGSI V2 normalizada Ejemplo  
-Aquí hay un ejemplo de una Alerta en formato JSON como normalizada. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### Alerta NGSI-v2 normalizada Ejemplo  
+Aquí hay un ejemplo de una Alerta en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "Alert:1",  
@@ -467,88 +476,106 @@ Alert:
   }  
 }  
 ```  
-#### Alerta NGSI-LD valores clave Ejemplo  
-Aquí hay un ejemplo de una Alerta en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "alertSource": "https://account.lab.fiware.org/users/8",  
- "category": "traffic",  
- "createdAt": "2019-06-06T12:06:06",  
- "dateIssued": {"@type": "DateTime", "@value": "2017-01-02T09:25:55.00Z"},  
- "description": "The road is completely blocked for 3kms",  
- "id": "urn:ngsi-ld:Alert:Alert:1",  
- "location": {"coordinates": [-3.712247222222222, 40.423852777777775],  
-              "type": "Point"},  
- "modifiedAt": "2019-06-07T12:07:06",  
- "severity": "high",  
- "subCategory": "trafficJam",  
- "type": "Alert",  
- "validFrom": {"@type": "DateTime", "@value": "2017-01-02T09:25:55.00Z"},  
- "validTo": {"@type": "DateTime", "@value": "2017-01-02T10:25:55.00Z"}}  
-```  
-#### Alerta NGSI-LD normalizada Ejemplo  
-Aquí hay un ejemplo de una Alerta en formato JSON-LD como normalizada. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### Alerta NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de una Alerta en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:Alert:Alert:1",  
-    "type": "Alert",  
-    "createdAt": "2019-06-06T12:06:06",  
-    "modifiedAt": "2019-06-07T12:07:06",  
-    "category": {  
-        "type": "Property",  
-        "value": "traffic"  
-    },  
-    "subCategory": {  
-        "type": "Property",  
-        "value": "trafficJam"  
-    },  
-    "validTo": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2017-01-02T10:25:55.00Z"  
-        }  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "The road is completely blocked for 3kms"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -3.712247222222222,  
-                40.423852777777775  
-            ]  
-        }  
-    },  
-    "dateIssued": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2017-01-02T09:25:55.00Z"  
-        }  
-    },  
-    "alertSource": {  
-        "type": "Property",  
-        "value": "https://account.lab.fiware.org/users/8"  
-    },  
-    "validFrom": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2017-01-02T09:25:55.00Z"  
-        }  
-    },  
-    "severity": {  
-        "type": "Property",  
-        "value": "high"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:Alert:Alert:1",  
+  "type": "Alert",  
+  "createdAt": "2019-06-06T12:06:06",  
+  "modifiedAt": "2019-06-07T12:07:06",  
+  "category": {  
+    "type": "Property",  
+    "value": "traffic"  
+  },  
+  "subCategory": {  
+    "type": "Property",  
+    "value": "trafficJam"  
+  },  
+  "validTo": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2017-01-02T10:25:55.00Z"  
+    }  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "The road is completely blocked for 3kms"  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -3.712247222222222,  
+        40.423852777777775  
+      ]  
+    }  
+  },  
+  "dateIssued": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2017-01-02T09:25:55.00Z"  
+    }  
+  },  
+  "alertSource": {  
+    "type": "Property",  
+    "value": "https://account.lab.fiware.org/users/8"  
+  },  
+  "validFrom": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2017-01-02T09:25:55.00Z"  
+    }  
+  },  
+  "severity": {  
+    "type": "Property",  
+    "value": "high"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### Alerta NGSI-LD normalizada Ejemplo  
+Aquí hay un ejemplo de una Alerta en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "alertSource": "https://account.lab.fiware.org/users/8",  
+  "category": "traffic",  
+  "createdAt": "2019-06-06T12:06:06",  
+  "dateIssued": {  
+    "@type": "DateTime",  
+    "@value": "2017-01-02T09:25:55.00Z"  
+  },  
+  "description": "The road is completely blocked for 3kms",  
+  "id": "urn:ngsi-ld:Alert:Alert:1",  
+  "location": {  
+    "coordinates": [  
+      -3.712247222222222,  
+      40.423852777777775  
+    ],  
+    "type": "Point"  
+  },  
+  "modifiedAt": "2019-06-07T12:07:06",  
+  "severity": "high",  
+  "subCategory": "trafficJam",  
+  "type": "Alert",  
+  "validFrom": {  
+    "@type": "DateTime",  
+    "@value": "2017-01-02T09:25:55.00Z"  
+  },  
+  "validTo": {  
+    "@type": "DateTime",  
+    "@value": "2017-01-02T10:25:55.00Z"  
+  }  
 }  
 ```  
