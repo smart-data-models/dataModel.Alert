@@ -14,10 +14,6 @@
           ],
           "description": "Property. NGSI Entity type. It has to be Alert."
         },
-        "description": {
-          "type": "string",
-          "description": "Property. Description of the Entity"
-        },
         "dateIssued": {
           "type": "string",
           "format": "date-time",
