@@ -95,7 +95,7 @@ Alert:
       format: date-time    
       type: Property    
     description:    
-      description: 'Description of the Entity'    
+      description: 'A description of this item'    
       type: Property    
     id:    
       anyOf: &alert_-_properties_-_owner_-_items_-_anyof    
