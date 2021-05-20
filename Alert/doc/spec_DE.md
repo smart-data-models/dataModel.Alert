@@ -1,11 +1,12 @@
 Entität: Alert  
 ==============  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Alert/blob/master/Alert/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Ein Alarm, der von einem Benutzer oder Gerät an einem bestimmten Ort erzeugt wird**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift.  - `alertSource`: Quelle des Alarms  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Kategorie des Alerts. Enum:'traffic, naturalDisaster, weather, environment, health, security, agriculture'  - `data`: Nutzdaten, die die abgerufenen Daten enthalten.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateIssued`: Das Datum und die Uhrzeit, zu der das Element ausgegeben wurde, im Format ISO8601 UTC.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Beschreibung der Entität  - `id`: Eindeutiger Bezeichner der Entität  - `location`:   - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `severity`: Schwere des Alarms  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `subCategory`: Beschreiben Sie die Unterkategorie des Alarms. Enum:'trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, Lawinenrisiko, Überschwemmungsrisiko, Luftverschmutzung, Wasserverschmutzung, Pollenkonzentration, Asthmaanfall, gestoßener Patient, gestürzter Patient, Herzanfall, Verdacht, Raub, Körperverletzung, Unruhen, Gebäudebrand, Waldbrand, Unkraut, Schnecke, Insekt, Nagetier, Bakterium, Mikrobe, Pilz, Milbe, Virus, Nematoden, Bewässerung, Düngung  - `type`: NGSI-Entitätstyp. Es muss Alert sein.  - `validFrom`: Der Beginn des Gültigkeitszeitraums für diese Prognose als ISO8601-Format  - `validTo`: Das Ende des Gültigkeitszeitraums für diese Prognose als ISO8601-Format    
+- `address`: Die Postanschrift  - `alertSource`: Quelle des Alarms  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Kategorie des Alerts. Enum:'traffic, naturalDisaster, weather, environment, health, security, agriculture'  - `data`: Nutzdaten, die die abgerufenen Daten enthalten.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateIssued`: Das Datum und die Uhrzeit, zu der das Element ausgegeben wurde, im Format ISO8601 UTC.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Beschreibung der Entität  - `id`: Eindeutiger Bezeichner der Entität  - `location`:   - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `severity`: Schwere des Alarms  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `subCategory`: Beschreiben Sie die Unterkategorie des Alarms. Enum:'trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, Lawinenrisiko, Überschwemmungsrisiko, Luftverschmutzung, Wasserverschmutzung, Pollenkonzentration, Asthmaanfall, gestoßener Patient, gestürzter Patient, Herzanfall, Verdacht, Raub, Körperverletzung, Unruhen, Gebäudebrand, Waldbrand, Unkraut, Schnecke, Insekt, Nagetier, Bakterium, Mikrobe, Pilz, Milbe, Virus, Nematoden, Bewässerung, Düngung  - `type`: NGSI-Entitätstyp. Es muss Alert sein.  - `validFrom`: Der Beginn des Gültigkeitszeitraums für diese Prognose als ISO8601-Format  - `validTo`: Das Ende des Gültigkeitszeitraums für diese Prognose als ISO8601-Format    
 Erforderliche Eigenschaften  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `type`    
 Diese Entität modelliert eine Warnung und könnte verwendet werden, um Warnungen in Bezug auf Verkehrsstaus, Unfälle, Wetterbedingungen, hohe Schadstoffwerte usw. zu senden. Der Zweck des Modells ist es, die Generierung von Benachrichtigungen für einen Benutzer zu unterstützen oder andere Aktionen auszulösen, die auf solchen Alarmen basieren. Ein Alert wird durch eine bestimmte Situation erzeugt. Die Hauptmerkmale eines Alarms sind, dass er nicht vorhersehbar ist und es sich nicht um wiederkehrende Daten handelt. Das bedeutet, dass ein Alert ein Unfall oder eine hohe Schadstoffmessung sein könnte, zusätzlich könnte es der Sturz eines Patienten oder ein Auto sein, das in die entgegengesetzte Richtung fährt.  Einige Beispiele für Kontextdaten sind: Art des Alarms (Verkehr, Wetter, Sicherheit, Verschmutzung usw.), Schweregrad, Ort usw.  
@@ -17,30 +18,29 @@ Alert:
   description: 'An alert generated by a user or device in a given location'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alertSource:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -269,8 +269,8 @@ Alert:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -300,6 +300,10 @@ Alert:
             - roadWorks    
             - hazardOnRoad    
             - injuredBiker    
+            - pedestrianOnRoad    
+            - bikerOnRoad    
+            - tramApproaching    
+            - crowdRisk    
             - flood    
             - tsunami    
             - coastalEvent    
@@ -307,6 +311,10 @@ Alert:
             - rainfall    
             - highTemperature    
             - lowTemperature    
+            - lowHumidity    
+            - highHumidity    
+            - highAtmosphericPressure    
+            - losAtmosphericPressure    
             - heatWave    
             - coldWave    
             - ice    
@@ -317,6 +325,7 @@ Alert:
             - tropicalCyclone    
             - hurricane    
             - snow/ice    
+            - badSeaState    
             - thunderstorms    
             - fireRisk    
             - avalancheRisk    
@@ -368,7 +377,7 @@ Alert:
             - tropicalCyclone    
             - tsunami    
             - wind    
-      description: 'Describe the sub category of alert. Enum:''trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, avalancheRisk, floodRisk, airPollution, waterPollution, pollenConcentration, asthmaAttack, bumpedPatient, fallenPatient, heartAttack, suspiciousAction, robbery, assault, civilDisorder, buildingFire, forestFire, noxiousWeed, snail, insect, rodent, bacteria, microbe, fungus,mite, virus, nematodes, irrigation, fertilisation'    
+      description: 'Describe the sub category of alert. Enum:''trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, avalancheRisk, floodRisk, airPollution, waterPollution, pollenConcentration, asthmaAttack, bumpedPatient, fallenPatient, heartAttack, suspiciousAction, robbery, assault, civilDisorder, buildingFire, forestFire, noxiousWeed, snail, insect, rodent, bacteria, microbe, fungus,mite, virus, nematodes, irrigation, fertilisation'    
       type: Property    
     type:    
       description: 'NGSI Entity type. It has to be Alert.'    
