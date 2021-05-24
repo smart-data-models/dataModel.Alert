@@ -2,10 +2,10 @@
 description: This is a compilation list of the current adopters of the data model [Data model] of the Subject [Subject].  All fields are non mandatory. More info at https://smart-data-models.github.io/data-models/templates/dataModel/CURRENT_ADOPTERS.yaml
 currentAdopters:
 -
- adopter: 
- description: 
- mail: 
+ adopter: Municipality of Florence
+ description: The Alert data model has been adopted in a public/private transport interaction use case in Florence (Italy), where alerts are automatically generated from video analytics running at the tram stops and surrounding intersections. The alerts generated are notified to trams and private vehicles using vehicle-to-anything communication (V2X) technologies.
+ mail: elastic-project@bsc.es
  organization: 
- project: 
- comments: 
- startDate: 
+ project: ELASTIC project (https://elastic-project.eu/)
+ comments: The ELASTIC project (https://elastic-project.eu/), is developing a novel software architecture for extreme-scale analytics. It incorporates a novel elasticity concept to distribute computational resources across the compute continuum. The ELASTIC software architecture will form the technological basis for advanced mobility systems and autonomous transport networks, and will be used to deploy a smart mobility use-case in a real urban area within the City of Florence (Italy). The project is coordinated by the Barcelona Supercomputing Center (BSC).
+ startDate: November 2020
