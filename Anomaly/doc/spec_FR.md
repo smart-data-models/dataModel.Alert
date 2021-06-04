@@ -1,14 +1,15 @@
-Entité : Anomalie  
-=================  
-[Licence ouverte](https://github.com/smart-data-models//dataModel.Alert/blob/master/Anomaly/LICENSE.md)  
+Entité : Anomaly  
+================  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.Alert/blob/master/Anomaly/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Cette entité contient une description harmonisée d'une anomalie.**  
 
-## Liste des biens  
+## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un autre nom pour cet article  - `anomalousProperty`: La propriété contrôlée (de l'appareil) dans laquelle l'anomalie a été détectée  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateDetected`: La date et l'heure auxquelles l'anomalie a été détectée pour la première fois  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `detectedBy`: L'identification de l'appareil sur lequel l'anomalie a été détectée  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `thresholdBreach`: Description d'un dépassement de seuil observé qui a contribué à la détection d'une anomalie  - `type`: Type d'entité NGSI-LD. Il doit s'agir d'une anomalie    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `anomalousProperty`: La propriété contrôlée (du dispositif) dans laquelle l'anomalie a été détectée.  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateDetected`: La date et l'heure à laquelle l'anomalie a été détectée pour la première fois.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `detectedBy`: L'ID du dispositif sur lequel l'anomalie a été détectée.  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `thresholdBreach`: Description d'un dépassement de seuil observé qui a contribué à la détection d'une anomalie  - `type`: Type d'entité NGSI-LD. Il doit s'agir d'une Anomalie    
 Propriétés requises  
-- `anomalousProperty`  - `dateDetected`  - `id`  - `type`  ## Modèle de données description des biens  
-Classement par ordre alphabétique (cliquez pour plus de détails)  
+- `anomalousProperty`  - `dateDetected`  - `id`  - `type`  ## Description des propriétés du modèle de données  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Anomaly:    
@@ -26,21 +27,18 @@ Anomaly:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/adddress    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -90,10 +88,10 @@ Anomaly:
       description: 'Unique identifier of the entity'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -113,7 +111,8 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -136,7 +135,8 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -161,7 +161,8 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -183,7 +184,8 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -208,7 +210,8 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -235,7 +238,7 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -249,8 +252,8 @@ Anomaly:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -294,8 +297,8 @@ Anomaly:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### Anomalie Valeurs clés de l'INSG V2 Exemple  
-Voici un exemple d'anomalie au format JSON en tant que valeurs clés. Ce format est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### Anomalie Valeurs-clés NGSI-v2 Exemple  
+Voici un exemple d'anomalie au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "1863179e-3768-4480-9167-ff21f870dd19",  
@@ -306,83 +309,91 @@ Anomaly:
   "thresholdBreach": [  
     {  
       "dateObserved": "2021-01-14T15:30:00Z",  
-      "measuredValue": "18.91",  
+      "measuredValue": 18.91,  
       "thresholdType": "LOWER",  
       "thresholdValue": "20"  
     },  
     {  
       "value": "2021-01-14T15:45:00Z",  
-      "measuredValue": "18.91",  
+      "measuredValue": 18.91,  
       "thresholdType": "LOWER",  
       "thresholdValue": "20"  
     }  
   ]  
 }  
 ```  
-#### Anomalie NGSI V2 normalisée Exemple  
-Voici un exemple d'une anomalie au format JSON telle que normalisée. Ce format est compatible avec NGSI V2 lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
-```json  
-{  
-    "id": "1863179e-3768-4480-9167-ff21f870dd19",  
-    "type": "Anomaly",  
-    "detectedBy": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
-    },  
-    "anomalousProperty": {  
-        "value": "Pressure"  
-    },  
-    "dateDetected": {  
-        "value": "2021-01-14T15:45:00Z"  
-    },  
-    "thresholdBreach": [  
-        {  
-            "datasetId": "Breach1",  
-            "value": {  
-                "dateObserved": {  
-                    "value": "2021-01-14T15:30:00Z"  
-                },  
-                "measuredValue": {  
-                    "value": "18.91",  
-                    "unitCode": "MTR"  
-                },  
-                "thresholdType": {  
-                    "value": "LOWER"  
-                },  
-                "thresholdValue": {  
-                    "value": "20",  
-                    "unitCode": "MTR"  
-                }  
-            }          
-        },  
-        {  
-            "datasetId": "Breach2",  
-            "value": {  
-                "dateObserved": {  
-                    "value": "2021-01-14T15:45:00Z"  
-                },  
-                "measuredValue": {  
-                    "value": "18.91",  
-                    "unitCode": "MTR"  
-                },  
-                "thresholdType": {  
-                    "value": "LOWER"  
-                },  
-                "thresholdValue": {  
-                    "value": "20",  
-                    "unitCode": "MTR"  
-                }  
-            }          
-        }  
-    ]  
-}  
-```  
-#### Anomalie Valeurs clés de l'INSG-LD Exemple  
-Voici un exemple d'anomalie au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+#### Anomalie NGSI-v2 normalisée Exemple  
+Voici un exemple d'anomalie au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "1863179e-3768-4480-9167-ff21f870dd19",  
   "type": "Anomaly",  
+  "detectedBy": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
+  },  
+  "anomalousProperty": {  
+    "type": "Text",  
+    "value": "Pressure"  
+  },  
+  "dateDetected": {  
+    "type": "DateTime",  
+    "value": "2021-01-14T15:45:00Z"  
+  },  
+  "thresholdBreach": [  
+    {  
+      "type": "StructuredValue",  
+      "value": {  
+        "dateObserved": {  
+          "type": "DateTime",  
+          "value": "2021-01-14T15:30:00Z"  
+        },  
+        "measuredValue": {  
+          "type": "Number",  
+          "value": 18.91  
+        },  
+        "thresholdType": {  
+          "type": "Text",  
+          "value": "LOWER"  
+        },  
+        "thresholdValue": {  
+          "type": "Number",  
+          "value": 20  
+        }  
+      }  
+    },  
+    {  
+      "type": "StructuredValue",  
+      "value": {  
+        "dateObserved": {  
+          "type": "DateTime",  
+          "value": "2021-01-14T15:45:00Z"  
+        },  
+        "measuredValue": {  
+          "type": "Number",  
+          "value": 18.91  
+        },  
+        "thresholdType": {  
+          "type": "Text",  
+          "value": "LOWER"  
+        },  
+        "thresholdValue": {  
+          "type": "Number",  
+          "value": 20  
+        }  
+      }  
+    }  
+  ]  
+}  
+```  
+#### Anomalie Valeurs-clés NGSI-LD Exemple  
+Voici un exemple d'anomalie au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "id": "urn:ngsi-ld:Anomaly:1863179e-3768-4480-9167-ff21f870dd19",  
+  "type": "Anomaly",  
+  "createdAt": "2021-01-14T15:45:00Z",  
+  "modifiedAt": "2021-01-14T15:45:00Z",  
   "detectedBy": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20",  
   "anomalousProperty": "Pressure",  
   "dateDetected": "2021-01-14T15:45:00Z",  
@@ -391,90 +402,60 @@ Anomaly:
       "dateObserved": "2021-01-14T15:30:00Z",  
       "measuredValue": "18.91",  
       "thresholdType": "LOWER",  
-      "thresholdValue": "20"  
+      "thresholdValue": 20  
     },  
     {  
-      "value": "2021-01-14T15:45:00Z",  
+      "dateObserved": "2021-01-14T15:45:00Z",  
       "measuredValue": "18.91",  
       "thresholdType": "LOWER",  
-      "thresholdValue": "20"  
+      "thresholdValue": 20  
     }  
   ],  
   "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
 ```  
 #### Anomalie NGSI-LD normalisée Exemple  
-Voici un exemple d'une anomalie au format JSON-LD telle que normalisée. Ce format est compatible avec JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'anomalie au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:Anomaly:1863179e-3768-4480-9167-ff21f870dd19",  
-    "type": "Anomaly",  
-    "createdAt": "2021-01-14T15:45:00Z",  
-    "modifiedAt": "2021-01-14T15:45:00Z",  
-    "detectedBy": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
+  "id": "1863179e-3768-4480-9167-ff21f870dd19",  
+  "type": "Anomaly",  
+  "detectedBy": {  
+    "type": "Property",  
+    "value": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
+  },  
+  "anomalousProperty": {  
+    "type": "Property",  
+    "value": "Pressure"  
+  },  
+  "dateDetected": {  
+    "type": "Property",  
+    "value": "2021-01-14T15:45:00Z"  
+  },  
+  "thresholdBreach": [  
+    {  
+      "type": "Property",  
+      "value": {  
+        "dateObserved": "2021-01-14T15:30:00Z",  
+        "measuredValue": "18.91",  
+        "thresholdType": "LOWER",  
+        "thresholdValue": "20"  
+      }  
     },  
-    "anomalousProperty": {  
-        "type": "Property",  
-        "value": "Pressure"  
-    },  
-    "dateDetected": {  
-        "type": "Property",  
-        "value": "2021-01-14T15:45:00Z"  
-    },  
-    "thresholdBreach": [  
-        {  
-            "datasetId": "urn:ngsi-ld:Dataset:Breach1",  
-            "value": {  
-                "dateObserved": {  
-                    "type": "Property",  
-                    "value": "2021-01-14T15:30:00Z"  
-                },  
-                "measuredValue": {  
-                    "type": "Property",  
-                    "value": "18.91",  
-                    "unitCode": "MTR"  
-                },  
-                "thresholdType": {  
-                    "type": "Property",  
-                    "value": "LOWER"  
-                },  
-                "thresholdValue": {  
-                    "type": "Property",  
-                    "value": "20",  
-                    "unitCode": "MTR"  
-                }  
-            }          
-        },  
-        {  
-            "datasetId": "urn:ngsi-ld:Dataset:Breach2",  
-            "value": {  
-                "dateObserved": {  
-                    "type": "Property",  
-                    "value": "2021-01-14T15:45:00Z"  
-                },  
-                "measuredValue": {  
-                    "type": "Property",  
-                    "value": "18.91",  
-                    "unitCode": "MTR"  
-                },  
-                "thresholdType": {  
-                    "type": "Property",  
-                    "value": "LOWER"  
-                },  
-                "thresholdValue": {  
-                    "type": "Property",  
-                    "value": "20",  
-                    "unitCode": "MTR"  
-                }  
-            }          
-        }  
-    ],  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context"  
-    ]  
+    {  
+      "type": "Property",  
+      "value": {  
+        "dateObserved": "2021-01-14T15:45:00Z",  
+        "measuredValue": "18.91",  
+        "thresholdType": "LOWER",  
+        "thresholdValue": "20"  
+      }  
+    }  
+  ],  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
 }  
 ```  
