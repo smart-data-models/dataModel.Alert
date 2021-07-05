@@ -1,11 +1,12 @@
 Entität: Anomalie  
 =================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Alert/blob/master/Anomaly/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung einer Anomalie.**  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `anomalousProperty`: Die controlledProperty (des Geräts), in der die Anomalie erkannt wurde  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateDetected`: Das Datum und die Uhrzeit, zu der die Anomalie erstmals erkannt wurde  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `detectedBy`: Die ID des Geräts, bei dem die Anomalie erkannt wurde  - `id`: Eindeutiger Bezeichner der Entität  - `location`:   - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `thresholdBreach`: Beschreibung einer beobachteten Schwellenwertverletzung, die zur Erkennung einer Anomalie beigetragen hat  - `type`: NGSI-LD-Entitätstyp. Es muss Anomalie sein    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `anomalousProperty`: Die controlledProperty (des Geräts), in der die Anomalie erkannt wurde  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateDetected`: Das Datum und die Uhrzeit, zu der die Anomalie erstmals erkannt wurde  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `detectedBy`: Die ID des Geräts, bei dem die Anomalie erkannt wurde  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `thresholdBreach`: Beschreibung einer beobachteten Schwellenwertverletzung, die zur Erkennung einer Anomalie beigetragen hat  - `type`: NGSI-LD-Entitätstyp. Es muss Anomalie sein    
 Erforderliche Eigenschaften  
 - `anomalousProperty`  - `dateDetected`  - `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -26,21 +27,18 @@ Anomaly:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
       x-ngsi:    
-        model: https://schema.org/adddress    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -90,10 +88,10 @@ Anomaly:
       description: 'Unique identifier of the entity'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -113,7 +111,8 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -136,7 +135,8 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -161,7 +161,8 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -183,7 +184,8 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -208,7 +210,8 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -235,7 +238,7 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
@@ -249,8 +252,8 @@ Anomaly:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -306,13 +309,13 @@ Anomaly:
   "thresholdBreach": [  
     {  
       "dateObserved": "2021-01-14T15:30:00Z",  
-      "measuredValue": "18.91",  
+      "measuredValue": 18.91,  
       "thresholdType": "LOWER",  
       "thresholdValue": "20"  
     },  
     {  
       "value": "2021-01-14T15:45:00Z",  
-      "measuredValue": "18.91",  
+      "measuredValue": 18.91,  
       "thresholdType": "LOWER",  
       "thresholdValue": "20"  
     }  
@@ -323,58 +326,64 @@ Anomaly:
 Hier ist ein Beispiel für eine Anomalie im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-    "id": "1863179e-3768-4480-9167-ff21f870dd19",  
-    "type": "Anomaly",  
-    "detectedBy": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
-    },  
-    "anomalousProperty": {  
-        "value": "Pressure"  
-    },  
-    "dateDetected": {  
-        "value": "2021-01-14T15:45:00Z"  
-    },  
-    "thresholdBreach": [  
-        {  
-            "datasetId": "Breach1",  
-            "value": {  
-                "dateObserved": {  
-                    "value": "2021-01-14T15:30:00Z"  
-                },  
-                "measuredValue": {  
-                    "value": "18.91",  
-                    "unitCode": "MTR"  
-                },  
-                "thresholdType": {  
-                    "value": "LOWER"  
-                },  
-                "thresholdValue": {  
-                    "value": "20",  
-                    "unitCode": "MTR"  
-                }  
-            }          
+  "id": "1863179e-3768-4480-9167-ff21f870dd19",  
+  "type": "Anomaly",  
+  "detectedBy": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
+  },  
+  "anomalousProperty": {  
+    "type": "Text",  
+    "value": "Pressure"  
+  },  
+  "dateDetected": {  
+    "type": "DateTime",  
+    "value": "2021-01-14T15:45:00Z"  
+  },  
+  "thresholdBreach": [  
+    {  
+      "type": "StructuredValue",  
+      "value": {  
+        "dateObserved": {  
+          "type": "DateTime",  
+          "value": "2021-01-14T15:30:00Z"  
         },  
-        {  
-            "datasetId": "Breach2",  
-            "value": {  
-                "dateObserved": {  
-                    "value": "2021-01-14T15:45:00Z"  
-                },  
-                "measuredValue": {  
-                    "value": "18.91",  
-                    "unitCode": "MTR"  
-                },  
-                "thresholdType": {  
-                    "value": "LOWER"  
-                },  
-                "thresholdValue": {  
-                    "value": "20",  
-                    "unitCode": "MTR"  
-                }  
-            }          
+        "measuredValue": {  
+          "type": "Number",  
+          "value": 18.91  
+        },  
+        "thresholdType": {  
+          "type": "Text",  
+          "value": "LOWER"  
+        },  
+        "thresholdValue": {  
+          "type": "Number",  
+          "value": 20  
         }  
-    ]  
+      }  
+    },  
+    {  
+      "type": "StructuredValue",  
+      "value": {  
+        "dateObserved": {  
+          "type": "DateTime",  
+          "value": "2021-01-14T15:45:00Z"  
+        },  
+        "measuredValue": {  
+          "type": "Number",  
+          "value": 18.91  
+        },  
+        "thresholdType": {  
+          "type": "Text",  
+          "value": "LOWER"  
+        },  
+        "thresholdValue": {  
+          "type": "Number",  
+          "value": 20  
+        }  
+      }  
+    }  
+  ]  
 }  
 ```  
 #### Anomalie NGSI-LD-Schlüsselwerte Beispiel  
@@ -385,64 +394,21 @@ Anomaly:
   "type": "Anomaly",  
   "createdAt": "2021-01-14T15:45:00Z",  
   "modifiedAt": "2021-01-14T15:45:00Z",  
-  "detectedBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
-  },  
-  "anomalousProperty": {  
-    "type": "Property",  
-    "value": "Pressure"  
-  },  
-  "dateDetected": {  
-    "type": "Property",  
-    "value": "2021-01-14T15:45:00Z"  
-  },  
+  "detectedBy": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20",  
+  "anomalousProperty": "Pressure",  
+  "dateDetected": "2021-01-14T15:45:00Z",  
   "thresholdBreach": [  
     {  
-      "datasetId": "urn:ngsi-ld:Dataset:Breach1",  
-      "value": {  
-        "dateObserved": {  
-          "type": "Property",  
-          "value": "2021-01-14T15:30:00Z"  
-        },  
-        "measuredValue": {  
-          "type": "Property",  
-          "value": "18.91",  
-          "unitCode": "MTR"  
-        },  
-        "thresholdType": {  
-          "type": "Property",  
-          "value": "LOWER"  
-        },  
-        "thresholdValue": {  
-          "type": "Property",  
-          "value": "20",  
-          "unitCode": "MTR"  
-        }  
-      }  
+      "dateObserved": "2021-01-14T15:30:00Z",  
+      "measuredValue": "18.91",  
+      "thresholdType": "LOWER",  
+      "thresholdValue": 20  
     },  
     {  
-      "datasetId": "urn:ngsi-ld:Dataset:Breach2",  
-      "value": {  
-        "dateObserved": {  
-          "type": "Property",  
-          "value": "2021-01-14T15:45:00Z"  
-        },  
-        "measuredValue": {  
-          "type": "Property",  
-          "value": "18.91",  
-          "unitCode": "MTR"  
-        },  
-        "thresholdType": {  
-          "type": "Property",  
-          "value": "LOWER"  
-        },  
-        "thresholdValue": {  
-          "type": "Property",  
-          "value": "20",  
-          "unitCode": "MTR"  
-        }  
-      }  
+      "dateObserved": "2021-01-14T15:45:00Z",  
+      "measuredValue": "18.91",  
+      "thresholdType": "LOWER",  
+      "thresholdValue": 20  
     }  
   ],  
   "@context": [  
@@ -456,21 +422,36 @@ Anomaly:
 {  
   "id": "1863179e-3768-4480-9167-ff21f870dd19",  
   "type": "Anomaly",  
-  "detectedBy": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20",  
-  "anomalousProperty": "Pressure",  
-  "dateDetected": "2021-01-14T15:45:00Z",  
+  "detectedBy": {  
+    "type": "Property",  
+    "value": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
+  },  
+  "anomalousProperty": {  
+    "type": "Property",  
+    "value": "Pressure"  
+  },  
+  "dateDetected": {  
+    "type": "Property",  
+    "value": "2021-01-14T15:45:00Z"  
+  },  
   "thresholdBreach": [  
     {  
-      "dateObserved": "2021-01-14T15:30:00Z",  
-      "measuredValue": "18.91",  
-      "thresholdType": "LOWER",  
-      "thresholdValue": "20"  
+      "type": "Property",  
+      "value": {  
+        "dateObserved": "2021-01-14T15:30:00Z",  
+        "measuredValue": "18.91",  
+        "thresholdType": "LOWER",  
+        "thresholdValue": "20"  
+      }  
     },  
     {  
-      "value": "2021-01-14T15:45:00Z",  
-      "measuredValue": "18.91",  
-      "thresholdType": "LOWER",  
-      "thresholdValue": "20"  
+      "type": "Property",  
+      "value": {  
+        "dateObserved": "2021-01-14T15:45:00Z",  
+        "measuredValue": "18.91",  
+        "thresholdType": "LOWER",  
+        "thresholdValue": "20"  
+      }  
     }  
   ],  
   "@context": [  
