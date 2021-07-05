@@ -9,13 +9,13 @@
       "dateObserved": "2021-01-14T15:30:00Z",
       "measuredValue": 18.91,
       "thresholdType": "LOWER",
-      "thresholdValue": "20"
+      "thresholdValue": 20
     },
     {
       "value": "2021-01-14T15:45:00Z",
       "measuredValue": 18.91,
       "thresholdType": "LOWER",
-      "thresholdValue": "20"
+      "thresholdValue": 20
     }
   ]
 }
