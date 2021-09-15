@@ -97,5 +97,12 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "alertSource",
+        "category",
+        "dateIssued"
     ]
 }
