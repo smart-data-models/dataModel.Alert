@@ -65,5 +65,11 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "anomalousProperty",
+        "dateDetected"
     ]
 }
