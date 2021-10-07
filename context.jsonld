@@ -1,0 +1,30 @@
+{
+    "@context": {
+        "address": "https://smartdatamodels.org/dataModel.Alert/address",
+        "alertSource": "https://smartdatamodels.org/dataModel.Alert/alertSource",
+        "alternateName": "https://smartdatamodels.org/dataModel.Alert/alternateName",
+        "anomalousProperty": "https://smartdatamodels.org/dataModel.Alert/anomalousProperty",
+        "areaServed": "https://smartdatamodels.org/dataModel.Alert/areaServed",
+        "category": "https://smartdatamodels.org/dataModel.Alert/category",
+        "data": "https://smartdatamodels.org/dataModel.Alert/data",
+        "dataProvider": "https://smartdatamodels.org/dataModel.Alert/dataProvider",
+        "dateCreated": "https://smartdatamodels.org/dataModel.Alert/dateCreated",
+        "dateDetected": "https://smartdatamodels.org/dataModel.Alert/dateDetected",
+        "dateIssued": "https://smartdatamodels.org/dataModel.Alert/dateIssued",
+        "dateModified": "https://smartdatamodels.org/dataModel.Alert/dateModified",
+        "description": "https://smartdatamodels.org/dataModel.Alert/description",
+        "detectedBy": "https://smartdatamodels.org/dataModel.Alert/detectedBy",
+        "id": "@id",
+        "location": "https://smartdatamodels.org/dataModel.Alert/location",
+        "name": "https://smartdatamodels.org/dataModel.Alert/name",
+        "owner": "https://smartdatamodels.org/dataModel.Alert/owner",
+        "seeAlso": "https://smartdatamodels.org/dataModel.Alert/seeAlso",
+        "severity": "https://smartdatamodels.org/dataModel.Alert/severity",
+        "source": "https://smartdatamodels.org/dataModel.Alert/source",
+        "subCategory": "https://smartdatamodels.org/dataModel.Alert/subCategory",
+        "thresholdBreach": "https://smartdatamodels.org/dataModel.Alert/thresholdBreach",
+        "type": "@type",
+        "validFrom": "https://smartdatamodels.org/dataModel.Alert/validFrom",
+        "validTo": "https://smartdatamodels.org/dataModel.Alert/validTo"
+    }
+}
