@@ -6,7 +6,7 @@ Version: 0.0.2
 This entity contains a harmonised description of an anomaly.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Alert/blob/master/Anomaly/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/Anomaly/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Alert/blob/master/Anomaly/doc/spec.md)
 
