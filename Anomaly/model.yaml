@@ -275,23 +275,25 @@ Anomaly:
         type: Property
     thresholdBreach:
       description: 'Description of an observed threshold breach that contributed to detection of an anomaly'
-      properties:
-        dateObserved:
-          description: 'Property. Model:''http://schema.org/DateTime''. A sub-property of the Property ''thresholdBreach''. The date and time at which the threshold breach was observed'
-          type: string
-        measuredValue:
-          description: 'Property. Model:''http://schema.org/Number''. A sub-property of the Property ''thresholdBreach''. The value measured for the corresponding device and controlled property'
-          type: number
-        thresholdType:
-          description: 'Property. Model:''https://schema.org/Text''. A sub-property of the Property ''thresholdBreach''. The type of the threshold that was breached'
-          enum:
-            - UPPER
-            - LOWER
-          type: string
-        thresholdValue:
-          description: 'Property. Model:''https://schema.org/Number''. A sub-property of the Property ''thresholdBreach''. The value of the threshold that was breached'
-          type: number
-      type: object
+      items:
+        properties:
+          dateObserved:
+            description: 'Property. Model:''http://schema.org/DateTime''. A sub-property of the Property ''thresholdBreach''. The date and time at which the threshold breach was observed'
+            type: string
+          measuredValue:
+            description: 'Property. Model:''http://schema.org/Number''. A sub-property of the Property ''thresholdBreach''. The value measured for the corresponding device and controlled property'
+            type: number
+          thresholdType:
+            description: 'Property. Model:''https://schema.org/Text''. A sub-property of the Property ''thresholdBreach''. The type of the threshold that was breached'
+            enum:
+              - UPPER
+              - LOWER
+            type: string
+          thresholdValue:
+            description: 'Property. Model:''https://schema.org/Number''. A sub-property of the Property ''thresholdBreach''. The value of the threshold that was breached'
+            type: number
+        type: object
+      type: array
       x-ngsi:
         model: https://schema.org/Text
         type: Property
@@ -308,3 +310,9 @@ Anomaly:
     - anomalousProperty
     - dateDetected
   type: object
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.Alert/blob/master/Anomaly/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/incubated/Anomaly/schema.json
+  x-model-tags: ""
+  x-version: 0.0.2
