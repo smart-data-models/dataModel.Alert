@@ -1,9 +1,9 @@
 {
-  "id": "1863179e-3768-4480-9167-ff21f870dd19",
+  "id": "urn:ngsi-ld:1863179e-3768-4480-9167-ff21f870dd19",
   "type": "Anomaly",
   "detectedBy": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"
+    "value": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"
   },
   "anomalousProperty": {
     "type": "Text",
@@ -13,48 +13,21 @@
     "type": "DateTime",
     "value": "2021-01-14T15:45:00Z"
   },
-  "thresholdBreach": [
-    {
-      "type": "StructuredValue",
-      "value": {
-        "dateObserved": {
-          "type": "DateTime",
-          "value": "2021-01-14T15:30:00Z"
-        },
-        "measuredValue": {
-          "type": "Number",
-          "value": 18.91
-        },
-        "thresholdType": {
-          "type": "Text",
-          "value": "LOWER"
-        },
-        "thresholdValue": {
-          "type": "Number",
-          "value": 20
-        }
+  "thresholdBreach": {
+    "type": "StructuredValue",
+    "value": [
+      {
+        "dateObserved": "2021-01-14T15:30:00Z",
+        "measuredValue": 18.91,
+        "thresholdType": "LOWER",
+        "thresholdValue": 20
+      },
+      {
+        "dateObserved": "2021-01-14T15:45:00Z",
+        "measuredValue": 18.91,
+        "thresholdType": "LOWER",
+        "thresholdValue": 20
       }
-    },
-    {
-      "type": "StructuredValue",
-      "value": {
-        "dateObserved": {
-          "type": "DateTime",
-          "value": "2021-01-14T15:45:00Z"
-        },
-        "measuredValue": {
-          "type": "Number",
-          "value": 18.91
-        },
-        "thresholdType": {
-          "type": "Text",
-          "value": "LOWER"
-        },
-        "thresholdValue": {
-          "type": "Number",
-          "value": 20
-        }
-      }
-    }
-  ]
+    ]
+  }
 }
