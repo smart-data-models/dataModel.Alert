@@ -1,26 +1,27 @@
 {
-  "id": "urn:ngsi-ld:Anomaly:1863179e-3768-4480-9167-ff21f870dd19",
-  "type": "Anomaly",
-  "createdAt": "2021-01-14T15:45:00Z",
-  "modifiedAt": "2021-01-14T15:45:00Z",
-  "detectedBy": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20",
-  "anomalousProperty": "Pressure",
-  "dateDetected": "2021-01-14T15:45:00Z",
-  "thresholdBreach": [
-    {
-      "dateObserved": "2021-01-14T15:30:00Z",
-      "measuredValue": 18.91,
-      "thresholdType": "LOWER",
-      "thresholdValue": 20
-    },
-    {
-      "dateObserved": "2021-01-14T15:45:00Z",
-      "measuredValue": 18.91,
-      "thresholdType": "LOWER",
-      "thresholdValue": 20
-    }
-  ],
-  "@context": [
-    "https://smart-data-models.github.io/dataModel.Alert/context.jsonld"
-  ]
+    "id": "urn:ngsi-ld:Anomaly:1863179e-3768-4480-9167-ff21f870dd19",
+    "type": "Anomaly",
+    "anomalousProperty": "Pressure",
+    "createdAt": "2021-01-14T15:45:00Z",
+    "dateDetected": "2021-01-14T15:45:00Z",
+    "detectedBy": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20",
+    "modifiedAt": "2021-01-14T15:45:00Z",
+    "thresholdBreach": [
+        {
+            "dateObserved": "2021-01-14T15:30:00Z",
+            "measuredValue": 18.91,
+            "thresholdType": "LOWER",
+            "thresholdValue": 20
+        },
+        {
+            "dateObserved": "2021-01-14T15:45:00Z",
+            "measuredValue": 18.91,
+            "thresholdType": "LOWER",
+            "thresholdValue": 20
+        }
+    ],
+    "@context": [
+        "https://smart-data-models.github.io/dataModel.Alert/context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/context.jsonld"
+    ]
 }
