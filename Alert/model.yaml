@@ -308,70 +308,70 @@ Alert:
     subCategory:
       anyOf:
         - enum:
-            - trafficJam
+            - airPollution
+            - assault
+            - asthmaAttack
+            - avalancheRisk
+            - bacteria
+            - badSeaState
+            - bikerOnRoad
+            - buildingFire
+            - bumpedPatient
             - carAccident
-            - carWrongDirection
             - carStopped
+            - carWrongDirection
+            - coastalEvent
+            - civilDisorder
+            - coldWave
+            - crowdRisk
+            - earthquake
+            - fallenPatient
+            - fertilisation
+            - fireRisk
+            - flood
+            - floodRisk
+            - fog
+            - forestFire
+            - fungus
+            - hazardOnRoad
+            - heartAttack
+            - heatWave
+            - highAtmosphericPressure
+            - highHumidity
+            - highTemperature
+            - hurricane
+            - ice
+            - injuredBiker
+            - insect
+            - irrigation
+            - lowAtmosphericPressure
+            - lowHumidity
+            - lowTemperature
+            - microbe
+            - mite
+            - nematodes
+            - noxiousWeed
+            - pedestrianOnRoad
+            - pollenConcentration
             - pothole
+            - rainfall
             - roadClosed
             - roadWorks
-            - hazardOnRoad
-            - injuredBiker
-            - pedestrianOnRoad
-            - bikerOnRoad
-            - tramApproaching
-            - crowdRisk
-            - flood
-            - tsunami
-            - coastalEvent
-            - earthquake
-            - rainfall
-            - highTemperature
-            - lowTemperature
-            - lowHumidity
-            - highHumidity
-            - highAtmosphericPressure
-            - losAtmosphericPressure
-            - heatWave
-            - coldWave
-            - ice
-            - snow
-            - wind
-            - fog
-            - tornado
-            - tropicalCyclone
-            - hurricane
-            - snow/ice
-            - badSeaState
-            - thunderstorms
-            - fireRisk
-            - avalancheRisk
-            - floodRisk
-            - airPollution
-            - waterPollution
-            - pollenConcentration
-            - asthmaAttack
-            - bumpedPatient
-            - fallenPatient
-            - heartAttack
-            - suspiciousAction
             - robbery
-            - assault
-            - civilDisorder
-            - buildingFire
-            - forestFire
-            - noxiousWeed
-            - snail
-            - insect
             - rodent
-            - bacteria
-            - microbe
-            - fungus
-            - mite
+            - snail
+            - snow
+            - snow/ice
+            - suspiciousAction
+            - thunderstorms
+            - tornado
+            - trafficJam
+            - tramApproaching
+            - tropicalCyclone
+            - tsunami
             - virus
-            - nematodes
-            - irrigation
-            - fertilisation
+            - waterPollution
+            - wind
         - description: 'Property. Weather categories. Enum:'' avalanches,coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind'''
           enum:
             - avalanches
@@ -394,6 +394,7 @@ Alert:
             - tropicalCyclone
             - tsunami
             - wind
+          type: string
       description: 'Describe the sub category of alert. Enum:''trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, avalancheRisk, floodRisk, airPollution, waterPollution, pollenConcentration, asthmaAttack, bumpedPatient, fallenPatient, heartAttack, suspiciousAction, robbery, assault, civilDisorder, buildingFire, forestFire, noxiousWeed, snail, insect, rodent, bacteria, microbe, fungus,mite, virus, nematodes, irrigation, fertilisation'
       type: string
       x-ngsi:
@@ -431,4 +432,4 @@ Alert:
   x-license-url: https://github.com/smart-data-models/dataModel.Alert/blob/master/Alert/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Alert/alert/schema.json
   x-model-tags: ""
-  x-version: 0.0.2
+  x-version: 0.0.3
