@@ -1,17 +1,17 @@
-Entität: Alert  
-==============  
-[Offene Lizenz](https://github.com/smart-data-models//dataModel.Alert/blob/master/Alert/LICENSE.md)  
-[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Ein Alarm, der von einem Benutzer oder Gerät an einem bestimmten Ort erzeugt wird**  
+Entità: Allarme  
+===============  
+[Licenza aperta](https://github.com/smart-data-models//dataModel.Alert/blob/master/Alert/LICENSE.md)  
+[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descrizione globale: **Un allarme generato da un utente o da un dispositivo in una data località**  
 
-## Liste der Eigenschaften  
+## Elenco delle proprietà  
 
-- `address`: Die Postanschrift  - `alertSource`: Quelle des Alarms  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Kategorie des Alerts. Enum:'traffic, naturalDisaster, weather, environment, health, security, agriculture'  - `data`: Nutzdaten, die die abgerufenen Daten enthalten.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateIssued`: Das Datum und die Uhrzeit, zu der das Element ausgegeben wurde, im Format ISO8601 UTC.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `severity`: Schwere des Alarms  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `subCategory`: Beschreiben Sie die Unterkategorie des Alarms. Enum:'trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, Gewitter, Brandgefahr, Lawinengefahr, Überschwemmungsgefahr, Luftverschmutzung, Wasserverschmutzung, Pollenkonzentration, Asthmaanfall, gestoßener Patient, gestürzter Patient, Herzanfall, Verdachtsmomente, Raub, Körperverletzung, Unruhen, Gebäudebrand, Waldbrand, Unkraut, Schnecke, Insekt, Nagetier, Bakterium, Mikrobe, Pilz, Milbe, Virus, Nematoden, Bewässerung, Düngung  - `type`: NGSI-Entitätstyp. Es muss Alert sein.  - `validFrom`: Der Beginn des Gültigkeitszeitraums für diese Prognose als ISO8601-Format  - `validTo`: Das Ende des Gültigkeitszeitraums für diese Prognose als ISO8601-Format    
-Erforderliche Eigenschaften  
+- `address`: L'indirizzo postale  - `alertSource`: Fonte dell'allarme  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `category`: Categoria dell'allarme. Enum:'traffic, naturalDisaster, weather, environment, health, security, agriculture'  - `data`: Payload contenente i dati recuperati.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateIssued`: La data e l'ora in cui l'articolo è stato emesso nel formato ISO8601 UTC.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `id`: Identificatore unico dell'entità  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `severity`: Gravità dell'allarme  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `subCategory`: Descrivere la sottocategoria di allarme. Enum:'trafficJam, carAccident, carWrongDirection, carStop, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood, tsunami, evento costiero, terremoto, pioggia, alta temperatura, bassa temperatura, onda di calore, onda fredda, ghiaccio, neve, vento, nebbia, tornado, ciclone tropicale, uragano, neve/ghiaccio, temporali, rischio incendio, rischio valanghe, rischio inondazioni, inquinamento dell'aria, inquinamento dell'acqua, concentrazione di polline, attacco d'asma, paziente urtato, paziente caduto, attacco cardiaco, azione sospetta, rapina, aggressione, disordine civile, incendio di edifici, incendio di boschi, erba nociva, lumaca, insetto, roditore, batteri, microbi, funghi, acari, virus, nematodi, irrigazione, fertilizzazione  - `type`: Tipo di entità NGSI. Deve essere Alert.  - `validFrom`: L'inizio del periodo di validità di questa previsione in formato ISO8601  - `validTo`: La fine del periodo di validità di questa previsione in formato ISO8601    
+Proprietà richieste  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `type`    
-Diese Entität modelliert eine Warnung und könnte verwendet werden, um Warnungen in Bezug auf Verkehrsstaus, Unfälle, Wetterbedingungen, hohe Schadstoffwerte usw. zu senden. Der Zweck des Modells ist es, die Generierung von Benachrichtigungen für einen Benutzer zu unterstützen oder andere Aktionen auszulösen, die auf solchen Alarmen basieren. Ein Alert wird durch eine bestimmte Situation erzeugt. Die Hauptmerkmale eines Alarms sind, dass er nicht vorhersehbar ist und es sich nicht um wiederkehrende Daten handelt. Das bedeutet, dass ein Alert ein Unfall oder eine hohe Schadstoffmessung sein könnte, zusätzlich könnte es der Sturz eines Patienten oder ein Auto sein, das in die entgegengesetzte Richtung fährt.  Einige Beispiele für Kontextdaten sind: Art des Alarms (Verkehr, Wetter, Sicherheit, Verschmutzung usw.), Schweregrad, Ort usw.  
-## Datenmodell Beschreibung der Eigenschaften  
-Alphabetisch sortiert (für Details anklicken)  
+Questa entità modella un allarme e potrebbe essere usata per inviare avvisi relativi a ingorghi, incidenti, condizioni meteorologiche, alto livello di inquinanti e così via. Lo scopo del modello è quello di supportare la generazione di notifiche per un utente o innescare altre azioni, sulla base di tali avvisi. Un allarme è generato da una situazione specifica. La caratteristica principale di un allarme è che non è prevedibile e non è un dato ricorrente. Ciò significa che un allarme potrebbe essere un incidente o una misura di alto livello di inquinanti, inoltre potrebbe essere la caduta di un paziente o una macchina che guida nella direzione opposta.  Alcuni esempi di dati di contesto sono: tipo di allarme (traffico, meteo, sicurezza, inquinamento, ecc.), gravità, posizione e così via.  
+## Descrizione del modello di dati delle proprietà  
+Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Alert:    
@@ -38,9 +38,10 @@ Alert:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alertSource:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -52,17 +53,20 @@ Alert:
           format: uri    
           type: string    
       description: 'Source of the alert'    
-      type: Relationship    
       x-ngsi:    
         model: http://schema.org/URL.    
+        type: Relationship    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     category:    
       description: 'Category of the Alert. Enum:''traffic, naturalDisaster, weather, environment, health, security, agriculture'''    
       enum:    
@@ -73,30 +77,43 @@ Alert:
         - health    
         - security    
         - agriculture    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     data:    
       description: 'Payload containing the data retrieved.'    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateIssued:    
       description: 'The date and time the item was issued in ISO8601 UTC format.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &alert_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -108,7 +125,8 @@ Alert:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -260,16 +278,21 @@ Alert:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *alert_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -280,7 +303,8 @@ Alert:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     severity:    
       description: 'Severity of the Alarm'    
       enum:    
@@ -289,10 +313,14 @@ Alert:
         - medium    
         - high    
         - critical    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     subCategory:    
       anyOf:    
         - enum:    
@@ -383,24 +411,30 @@ Alert:
             - tsunami    
             - wind    
       description: 'Describe the sub category of alert. Enum:''trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, avalancheRisk, floodRisk, airPollution, waterPollution, pollenConcentration, asthmaAttack, bumpedPatient, fallenPatient, heartAttack, suspiciousAction, robbery, assault, civilDisorder, buildingFire, forestFire, noxiousWeed, snail, insect, rodent, bacteria, microbe, fungus,mite, virus, nematodes, irrigation, fertilisation'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be Alert.'    
       enum:    
         - Alert    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     validFrom:    
       description: 'The start of the validity period for this forecast as a ISO8601 format'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     validTo:    
       description: 'The end of the validity period for this forecast as a ISO8601 format'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
   required:    
     - id    
     - type    
@@ -408,11 +442,17 @@ Alert:
     - category    
     - dateIssued    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Alert/blob/master/Alert/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Alert/alert/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
-## Beispiel-Nutzlasten  
-#### Alert NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für einen Alert im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+## Esempio di payloads  
+#### Allarme valori chiave NGSI-v2 Esempio  
+Ecco un esempio di un Alert in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Alert:1",  
@@ -431,8 +471,8 @@ Alert:
   "alertSource": "https://account.lab.fiware.org/users/8"  
 }  
 ```  
-#### Alert NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen Alert im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### Allarme NGSI-v2 normalizzato Esempio  
+Ecco un esempio di un Alert in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Alert:1",  
@@ -481,8 +521,8 @@ Alert:
   }  
 }  
 ```  
-#### Alert NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für einen Alert im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+#### Allarme valori chiave NGSI-LD Esempio  
+Ecco un esempio di un Alert in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Alert:Alert:1",  
@@ -546,8 +586,8 @@ Alert:
   ]  
 }  
 ```  
-#### Alert NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für einen Alert im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### Allarme NGSI-LD normalizzato Esempio  
+Ecco un esempio di un Alert in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "@context": [  
@@ -584,4 +624,4 @@ Alert:
   }  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza

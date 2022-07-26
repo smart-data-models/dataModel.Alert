@@ -1,17 +1,17 @@
-Entität: Alert  
-==============  
-[Offene Lizenz](https://github.com/smart-data-models//dataModel.Alert/blob/master/Alert/LICENSE.md)  
-[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Ein Alarm, der von einem Benutzer oder Gerät an einem bestimmten Ort erzeugt wird**  
+エンティティアラート  
+==========  
+[オープンライセンス](https://github.com/smart-data-models//dataModel.Alert/blob/master/Alert/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな説明です。**指定された場所のユーザーまたはデバイスによって生成されたアラート**。  
 
-## Liste der Eigenschaften  
+## プロパティのリスト  
 
-- `address`: Die Postanschrift  - `alertSource`: Quelle des Alarms  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Kategorie des Alerts. Enum:'traffic, naturalDisaster, weather, environment, health, security, agriculture'  - `data`: Nutzdaten, die die abgerufenen Daten enthalten.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateIssued`: Das Datum und die Uhrzeit, zu der das Element ausgegeben wurde, im Format ISO8601 UTC.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `severity`: Schwere des Alarms  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `subCategory`: Beschreiben Sie die Unterkategorie des Alarms. Enum:'trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, Gewitter, Brandgefahr, Lawinengefahr, Überschwemmungsgefahr, Luftverschmutzung, Wasserverschmutzung, Pollenkonzentration, Asthmaanfall, gestoßener Patient, gestürzter Patient, Herzanfall, Verdachtsmomente, Raub, Körperverletzung, Unruhen, Gebäudebrand, Waldbrand, Unkraut, Schnecke, Insekt, Nagetier, Bakterium, Mikrobe, Pilz, Milbe, Virus, Nematoden, Bewässerung, Düngung  - `type`: NGSI-Entitätstyp. Es muss Alert sein.  - `validFrom`: Der Beginn des Gültigkeitszeitraums für diese Prognose als ISO8601-Format  - `validTo`: Das Ende des Gültigkeitszeitraums für diese Prognose als ISO8601-Format    
-Erforderliche Eigenschaften  
+- `address`: 郵送先住所  - `alertSource`: 警報の発信源  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `category`: アラートのカテゴリー。Enum:'traffic, naturalDisaster, weather, environment, health, security, agriculture'.  - `data`: 取得したデータを含むペイロード。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateIssued`: アイテムの発行日時がISO8601 UTC形式で表示されます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `severity`: アラームの重大性  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `subCategory`: アラートのサブカテゴリーを記述します。列挙します。'trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood,津波、沿岸イベント、地震、降雨、高温、低温、熱波、寒波、氷、雪、風、霧、竜巻、熱帯性サイクロン、ハリケーン、雪/氷。雷雨、火災リスク、雪崩リスク、洪水リスク、大気汚染、水質汚染、花粉濃度、喘息発作、ぶつかった患者、倒れた患者、心臓発作、不審な行動、強盗、暴行、市民の混乱、建物火災、森林火災、有害な雑草、カタツムリ、昆虫、げっ歯類、細菌、微生物、カビ、ダニ、ウイルス、線虫、灌漑、施肥など。  - `type`: NGSI エンティティタイプ。Alertでなければならない。  - `validFrom`: この予報の有効期間の開始日をISO8601形式で表したもの  - `validTo`: ISO8601形式の予報の有効期間の終了日    
+必須項目  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `type`    
-Diese Entität modelliert eine Warnung und könnte verwendet werden, um Warnungen in Bezug auf Verkehrsstaus, Unfälle, Wetterbedingungen, hohe Schadstoffwerte usw. zu senden. Der Zweck des Modells ist es, die Generierung von Benachrichtigungen für einen Benutzer zu unterstützen oder andere Aktionen auszulösen, die auf solchen Alarmen basieren. Ein Alert wird durch eine bestimmte Situation erzeugt. Die Hauptmerkmale eines Alarms sind, dass er nicht vorhersehbar ist und es sich nicht um wiederkehrende Daten handelt. Das bedeutet, dass ein Alert ein Unfall oder eine hohe Schadstoffmessung sein könnte, zusätzlich könnte es der Sturz eines Patienten oder ein Auto sein, das in die entgegengesetzte Richtung fährt.  Einige Beispiele für Kontextdaten sind: Art des Alarms (Verkehr, Wetter, Sicherheit, Verschmutzung usw.), Schweregrad, Ort usw.  
-## Datenmodell Beschreibung der Eigenschaften  
-Alphabetisch sortiert (für Details anklicken)  
+このエンティティはアラートをモデル化したもので、交通渋滞、事故、天候、高濃度の汚染物質などに関するアラートを送信するために使用できます。このモデルの目的は、このようなアラートに基づいて、ユーザーへの通知の生成をサポートしたり、他のアクションをトリガすることです。アラートは特定の状況によって生成されます。アラートの主な特徴は、それが予測可能ではなく、反復的なデータではないということです。つまり、アラートは、事故や高レベルの汚染物質の測定値である可能性もあれば、患者の転倒や反対方向に走行する車である可能性もあります。  コンテキストデータの例としては、アラートの種類（交通、天候、セキュリティ、汚染など）、重大度、場所などがあります。  
+## データモデルによるプロパティの記述  
+アルファベット順（クリックすると詳細が表示されます）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Alert:    
@@ -38,9 +38,10 @@ Alert:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alertSource:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -52,17 +53,20 @@ Alert:
           format: uri    
           type: string    
       description: 'Source of the alert'    
-      type: Relationship    
       x-ngsi:    
         model: http://schema.org/URL.    
+        type: Relationship    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     category:    
       description: 'Category of the Alert. Enum:''traffic, naturalDisaster, weather, environment, health, security, agriculture'''    
       enum:    
@@ -73,30 +77,43 @@ Alert:
         - health    
         - security    
         - agriculture    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     data:    
       description: 'Payload containing the data retrieved.'    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateIssued:    
       description: 'The date and time the item was issued in ISO8601 UTC format.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &alert_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -108,7 +125,8 @@ Alert:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -260,16 +278,21 @@ Alert:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *alert_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -280,7 +303,8 @@ Alert:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     severity:    
       description: 'Severity of the Alarm'    
       enum:    
@@ -289,10 +313,14 @@ Alert:
         - medium    
         - high    
         - critical    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     subCategory:    
       anyOf:    
         - enum:    
@@ -383,24 +411,30 @@ Alert:
             - tsunami    
             - wind    
       description: 'Describe the sub category of alert. Enum:''trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, avalancheRisk, floodRisk, airPollution, waterPollution, pollenConcentration, asthmaAttack, bumpedPatient, fallenPatient, heartAttack, suspiciousAction, robbery, assault, civilDisorder, buildingFire, forestFire, noxiousWeed, snail, insect, rodent, bacteria, microbe, fungus,mite, virus, nematodes, irrigation, fertilisation'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be Alert.'    
       enum:    
         - Alert    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     validFrom:    
       description: 'The start of the validity period for this forecast as a ISO8601 format'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     validTo:    
       description: 'The end of the validity period for this forecast as a ISO8601 format'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
   required:    
     - id    
     - type    
@@ -408,11 +442,17 @@ Alert:
     - category    
     - dateIssued    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Alert/blob/master/Alert/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Alert/alert/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
-## Beispiel-Nutzlasten  
-#### Alert NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für einen Alert im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+## ペイロードの例  
+#### Alert NGSI-v2 key-valuesの例。  
+JSON-LD形式でkey-valuesとしてAlertを表示した例です。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Alert:1",  
@@ -431,8 +471,8 @@ Alert:
   "alertSource": "https://account.lab.fiware.org/users/8"  
 }  
 ```  
-#### Alert NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen Alert im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### 警告 NGSI-v2 正規化例  
+正規化されたJSON-LD形式のAlertの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Alert:1",  
@@ -481,8 +521,8 @@ Alert:
   }  
 }  
 ```  
-#### Alert NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für einen Alert im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+#### 警告 NGSI-LDのキーバリューの例  
+JSON-LD形式でkey-valuesとしてAlertを表示した例です。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:Alert:Alert:1",  
@@ -546,8 +586,8 @@ Alert:
   ]  
 }  
 ```  
-#### Alert NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für einen Alert im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### 警報 NGSI-LD 正規化例  
+正規化されたJSON-LD形式のAlertの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "@context": [  
@@ -584,4 +624,4 @@ Alert:
   }  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
