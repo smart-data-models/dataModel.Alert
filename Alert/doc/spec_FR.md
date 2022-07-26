@@ -1,12 +1,14 @@
-Entité : Alert  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : Alert  
 ==============  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Alert/blob/master/Alert/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Une alerte générée par un utilisateur ou un dispositif dans un lieu donné**.  
+version : 0.0.3  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alertSource`: Source de l'alerte  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `category`: Catégorie de l'alerte. Enum : 'traffic, naturalDisaster, weather, environment, health, security, agriculture' (trafic, catastrophe naturelle, météo, environnement, santé, sécurité, agriculture)  - `data`: Charge utile contenant les données récupérées.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateIssued`: La date et l'heure d'émission de l'article au format ISO8601 UTC.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codés JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `severity`: Gravité de l'alarme  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `subCategory`: Décrit la sous-catégorie d'alerte. Enum :'embouteillage, accident de voiture, mauvaise direction, voiture arrêtée, nid de poule, route fermée, travaux, danger sur la route, cycliste blessé, piéton sur la route, cycliste sur la route, tramway en approche, inondation, tsunami, événement côtier, tremblement de terre, pluie, hauteTempérature, basseTempérature, vague de chaleur, vague de froid, glace, neige, vent, brouillard, tornade, cyclone tropical, ouragan, neige/glace, orages, risque d'incendie, risque d'avalanche, risque d'inondation, pollution de l'air, pollution de l'eau, concentration de pollen, crise d'asthme, patient heurté, patient tombé, crise cardiaque, action suspecte, vol, agression, troubles civils, incendie de bâtiment, incendie de forêt, herbe nuisible, escargot, insecte, rongeur, bactérie, microbe, champignon, acarien, virus, nématodes, irrigation, fertilisation, etc.  - `type`: Type d'entité NGSI. Il doit s'agir d'une alerte.  - `validFrom`: Le début de la période de validité de cette prévision au format ISO8601.  - `validTo`: La fin de la période de validité de cette prévision au format ISO8601.    
+- `address`: L'adresse postale  - `alertSource`: Source de l'alerte  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `category`: Catégorie de l'alerte. Enum : 'traffic, naturalDisaster, weather, environment, health, security, agriculture' (trafic, catastrophe naturelle, météo, environnement, santé, sécurité, agriculture)  - `data`: Charge utile contenant les données récupérées.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateIssued`: La date et l'heure d'émission de l'article au format ISO8601 UTC.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `severity`: Gravité de l'alarme  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `subCategory`: Décrit la sous-catégorie d'alerte. Enum :'embouteillage, accident de voiture, mauvaise direction, voiture arrêtée, nid de poule, route fermée, travaux, danger sur la route, cycliste blessé, piéton sur la route, cycliste sur la route, tramway en approche, inondation, tsunami, événement côtier, tremblement de terre, pluie, hauteTempérature, basseTempérature, vague de chaleur, vague de froid, glace, neige, vent, brouillard, tornade, cyclone tropical, ouragan, neige/glace, orages, risque d'incendie, risque d'avalanche, risque d'inondation, pollution de l'air, pollution de l'eau, concentration de pollen, crise d'asthme, patient heurté, patient tombé, crise cardiaque, action suspecte, vol, agression, troubles civils, incendie de bâtiment, incendie de forêt, herbe nuisible, escargot, insecte, rongeur, bactérie, microbe, champignon, acarien, virus, nématodes, irrigation, fertilisation, etc.  - `type`: Type d'entité NGSI. Il doit s'agir d'une alerte.  - `validFrom`: Le début de la période de validité de cette prévision au format ISO8601.  - `validTo`: La fin de la période de validité de cette prévision au format ISO8601.    
 Propriétés requises  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `type`    
 Cette entité modélise une alerte et peut être utilisée pour envoyer des alertes liées à des embouteillages, des accidents, des conditions météorologiques, un niveau élevé de polluants, etc. L'objectif de ce modèle est de prendre en charge la génération de notifications pour un utilisateur ou de déclencher d'autres actions, sur la base de telles alertes. Une alerte est générée par une situation spécifique. Les principales caractéristiques d'une alerte sont qu'elle n'est pas prévisible et qu'il ne s'agit pas d'une donnée récurrente. Cela signifie qu'une alerte peut être un accident ou une mesure de niveau élevé de polluants, mais aussi la chute d'un patient ou une voiture roulant dans la direction opposée.  Voici quelques exemples de données contextuelles : type d'alerte (trafic, météo, sécurité, pollution, etc.), gravité, emplacement, etc.  
@@ -38,9 +40,10 @@ Alert:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alertSource:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -52,17 +55,20 @@ Alert:
           format: uri    
           type: string    
       description: 'Source of the alert'    
-      type: Relationship    
       x-ngsi:    
         model: http://schema.org/URL.    
+        type: Relationship    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     category:    
       description: 'Category of the Alert. Enum:''traffic, naturalDisaster, weather, environment, health, security, agriculture'''    
       enum:    
@@ -73,30 +79,43 @@ Alert:
         - health    
         - security    
         - agriculture    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     data:    
       description: 'Payload containing the data retrieved.'    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateIssued:    
       description: 'The date and time the item was issued in ISO8601 UTC format.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &alert_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -108,7 +127,8 @@ Alert:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -260,16 +280,21 @@ Alert:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *alert_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -280,7 +305,8 @@ Alert:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     severity:    
       description: 'Severity of the Alarm'    
       enum:    
@@ -289,77 +315,81 @@ Alert:
         - medium    
         - high    
         - critical    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     subCategory:    
       anyOf:    
         - enum:    
-            - trafficJam    
+            - airPollution    
+            - assault    
+            - asthmaAttack    
+            - avalancheRisk    
+            - bacteria    
+            - badSeaState    
+            - bikerOnRoad    
+            - buildingFire    
+            - bumpedPatient    
             - carAccident    
-            - carWrongDirection    
             - carStopped    
+            - carWrongDirection    
+            - coastalEvent    
+            - civilDisorder    
+            - coldWave    
+            - crowdRisk    
+            - earthquake    
+            - fallenPatient    
+            - fertilisation    
+            - fireRisk    
+            - flood    
+            - floodRisk    
+            - fog    
+            - forestFire    
+            - fungus    
+            - hazardOnRoad    
+            - heartAttack    
+            - heatWave    
+            - highAtmosphericPressure    
+            - highHumidity    
+            - highTemperature    
+            - hurricane    
+            - ice    
+            - injuredBiker    
+            - insect    
+            - irrigation    
+            - lowAtmosphericPressure    
+            - lowHumidity    
+            - lowTemperature    
+            - microbe    
+            - mite    
+            - nematodes    
+            - noxiousWeed    
+            - pedestrianOnRoad    
+            - pollenConcentration    
             - pothole    
+            - rainfall    
             - roadClosed    
             - roadWorks    
-            - hazardOnRoad    
-            - injuredBiker    
-            - pedestrianOnRoad    
-            - bikerOnRoad    
-            - tramApproaching    
-            - crowdRisk    
-            - flood    
-            - tsunami    
-            - coastalEvent    
-            - earthquake    
-            - rainfall    
-            - highTemperature    
-            - lowTemperature    
-            - lowHumidity    
-            - highHumidity    
-            - highAtmosphericPressure    
-            - losAtmosphericPressure    
-            - heatWave    
-            - coldWave    
-            - ice    
-            - snow    
-            - wind    
-            - fog    
-            - tornado    
-            - tropicalCyclone    
-            - hurricane    
-            - snow/ice    
-            - badSeaState    
-            - thunderstorms    
-            - fireRisk    
-            - avalancheRisk    
-            - floodRisk    
-            - airPollution    
-            - waterPollution    
-            - pollenConcentration    
-            - asthmaAttack    
-            - bumpedPatient    
-            - fallenPatient    
-            - heartAttack    
-            - suspiciousAction    
             - robbery    
-            - assault    
-            - civilDisorder    
-            - buildingFire    
-            - forestFire    
-            - noxiousWeed    
-            - snail    
-            - insect    
             - rodent    
-            - bacteria    
-            - microbe    
-            - fungus    
-            - mite    
+            - snail    
+            - snow    
+            - snow/ice    
+            - suspiciousAction    
+            - thunderstorms    
+            - tornado    
+            - trafficJam    
+            - tramApproaching    
+            - tropicalCyclone    
+            - tsunami    
             - virus    
-            - nematodes    
-            - irrigation    
-            - fertilisation    
+            - waterPollution    
+            - wind    
         - description: 'Property. Weather categories. Enum:'' avalanches,coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind'''    
           enum:    
             - avalanches    
@@ -382,25 +412,32 @@ Alert:
             - tropicalCyclone    
             - tsunami    
             - wind    
+          type: string    
       description: 'Describe the sub category of alert. Enum:''trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, avalancheRisk, floodRisk, airPollution, waterPollution, pollenConcentration, asthmaAttack, bumpedPatient, fallenPatient, heartAttack, suspiciousAction, robbery, assault, civilDisorder, buildingFire, forestFire, noxiousWeed, snail, insect, rodent, bacteria, microbe, fungus,mite, virus, nematodes, irrigation, fertilisation'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be Alert.'    
       enum:    
         - Alert    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     validFrom:    
       description: 'The start of the validity period for this forecast as a ISO8601 format'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     validTo:    
       description: 'The end of the validity period for this forecast as a ISO8601 format'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
   required:    
     - id    
     - type    
@@ -408,6 +445,12 @@ Alert:
     - category    
     - dateIssued    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Alert/blob/master/Alert/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Alert/alert/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## Exemples de charges utiles  
@@ -482,106 +525,105 @@ Alert:
 }  
 ```  
 #### Alert NGSI-LD key-values Exemple  
-Voici un exemple d'alerte au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'alerte au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Alert:Alert:1",  
-  "type": "Alert",  
-  "createdAt": "2019-06-06T12:06:06",  
-  "modifiedAt": "2019-06-07T12:07:06",  
-  "category": {  
-    "type": "Property",  
-    "value": "traffic"  
-  },  
-  "subCategory": {  
-    "type": "Property",  
-    "value": "trafficJam"  
-  },  
-  "validTo": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-01-02T10:25:55.00Z"  
-    }  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "The road is completely blocked for 3kms"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.712247222222222,  
-        40.423852777777775  
-      ]  
-    }  
-  },  
-  "dateIssued": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-01-02T09:25:55.00Z"  
-    }  
-  },  
-  "alertSource": {  
-    "type": "Property",  
-    "value": "https://account.lab.fiware.org/users/8"  
-  },  
-  "validFrom": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-01-02T09:25:55.00Z"  
-    }  
-  },  
-  "severity": {  
-    "type": "Property",  
-    "value": "high"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:Alert:Alert:1",  
+    "type": "Alert",  
+    "alertSource": {  
+        "type": "Property",  
+        "value": "https://account.lab.fiware.org/users/8"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": "traffic"  
+    },  
+    "createdAt": "2019-06-06T12:06:06",  
+    "dateIssued": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-01-02T09:25:55.00Z"  
+        }  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "The road is completely blocked for 3kms"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.712247222222222,  
+                40.423852777777775  
+            ]  
+        }  
+    },  
+    "modifiedAt": "2019-06-07T12:07:06",  
+    "severity": {  
+        "type": "Property",  
+        "value": "high"  
+    },  
+    "subCategory": {  
+        "type": "Property",  
+        "value": "trafficJam"  
+    },  
+    "validFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-01-02T09:25:55.00Z"  
+        }  
+    },  
+    "validTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-01-02T10:25:55.00Z"  
+        }  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/context.jsonld"  
+    ]  
 }  
 ```  
 #### Alerte NGSI-LD normalisée Exemple  
-Voici un exemple d'alerte au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'un Alert au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "alertSource": "https://account.lab.fiware.org/users/8",  
-  "category": "traffic",  
-  "createdAt": "2019-06-06T12:06:06",  
-  "dateIssued": {  
-    "@type": "DateTime",  
-    "@value": "2017-01-02T09:25:55.00Z"  
-  },  
-  "description": "The road is completely blocked for 3kms",  
-  "id": "urn:ngsi-ld:Alert:Alert:1",  
-  "location": {  
-    "coordinates": [  
-      -3.712247222222222,  
-      40.423852777777775  
-    ],  
-    "type": "Point"  
-  },  
-  "modifiedAt": "2019-06-07T12:07:06",  
-  "severity": "high",  
-  "subCategory": "trafficJam",  
-  "type": "Alert",  
-  "validFrom": {  
-    "@type": "DateTime",  
-    "@value": "2017-01-02T09:25:55.00Z"  
-  },  
-  "validTo": {  
-    "@type": "DateTime",  
-    "@value": "2017-01-02T10:25:55.00Z"  
-  }  
+    "id": "urn:ngsi-ld:Alert:Alert:1",  
+    "type": "Alert",  
+    "alertSource": "https://account.lab.fiware.org/users/8",  
+    "category": "traffic",  
+    "createdAt": "2019-06-06T12:06:06",  
+    "dateIssued": {  
+        "@type": "DateTime",  
+        "@value": "2017-01-02T09:25:55.00Z"  
+    },  
+    "description": "The road is completely blocked for 3kms",  
+    "location": {  
+        "coordinates": [  
+            -3.712247222222222,  
+            40.423852777777775  
+        ],  
+        "type": "Point"  
+    },  
+    "modifiedAt": "2019-06-07T12:07:06",  
+    "severity": "high",  
+    "subCategory": "trafficJam",  
+    "validFrom": {  
+        "@type": "DateTime",  
+        "@value": "2017-01-02T09:25:55.00Z"  
+    },  
+    "validTo": {  
+        "@type": "DateTime",  
+        "@value": "2017-01-02T10:25:55.00Z"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
