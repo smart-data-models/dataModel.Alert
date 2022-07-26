@@ -1,17 +1,19 @@
-エンティティアラート  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティ注意喚起  
 ==========  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Alert/blob/master/Alert/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明です。**指定された場所のユーザーまたはデバイスによって生成されたアラート**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**指定された場所にいるユーザーまたはデバイスによって生成されたアラート**。  
+バージョン: 0.0.3  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alertSource`: 警報の発信源  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `category`: アラートのカテゴリー。Enum:'traffic, naturalDisaster, weather, environment, health, security, agriculture'.  - `data`: 取得したデータを含むペイロード。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateIssued`: アイテムの発行日時がISO8601 UTC形式で表示されます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `severity`: アラームの重大性  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `subCategory`: アラートのサブカテゴリーを記述します。列挙します。'trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood,津波、沿岸イベント、地震、降雨、高温、低温、熱波、寒波、氷、雪、風、霧、竜巻、熱帯性サイクロン、ハリケーン、雪/氷。雷雨、火災リスク、雪崩リスク、洪水リスク、大気汚染、水質汚染、花粉濃度、喘息発作、ぶつかった患者、倒れた患者、心臓発作、不審な行動、強盗、暴行、市民の混乱、建物火災、森林火災、有害な雑草、カタツムリ、昆虫、げっ歯類、細菌、微生物、カビ、ダニ、ウイルス、線虫、灌漑、施肥など。  - `type`: NGSI エンティティタイプ。Alertでなければならない。  - `validFrom`: この予報の有効期間の開始日をISO8601形式で表したもの  - `validTo`: ISO8601形式の予報の有効期間の終了日    
-必須項目  
+- `address`: 郵送先住所  - `alertSource`: 警報の発生源  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `category`: アラートのカテゴリ。Enum:'traffic, naturalDisaster, weather, environment, health, security, agriculture'.  - `data`: 取得したデータを含むペイロード。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateIssued`: ISO8601 UTC フォーマットで発行された日付と時刻。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `severity`: アラームの重要度  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `subCategory`: アラートのサブカテゴリを記述する。列挙する。'trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood,津波、海岸イベント、地震、降雨、高温、低温、熱波、寒波、氷、雪、風、霧、竜巻、熱帯サイクロン、ハリケーン、雪/氷。雷雨、火災リスク、雪崩リスク、洪水リスク、大気汚染、水質汚濁、花粉濃度、喘息発作、患者との接触、患者の転落、心臓発作、不審行為、強盗、暴行、市民混乱、建物火災、森林火災、有害草、かたつむり、虫、齧歯類、細菌、微生物、真菌、ダニ、ウイルス、線虫、潅水、受精  - `type`: NGSI Entityタイプ。Alertでなければならない。  - `validFrom`: ISO8601形式で表したこの予報の有効期間の開始日  - `validTo`: この予報のISO8601フォーマットとしての有効期間の終了日    
+必要なプロパティ  
 - `alertSource`  - `category`  - `dateIssued`  - `id`  - `type`    
-このエンティティはアラートをモデル化したもので、交通渋滞、事故、天候、高濃度の汚染物質などに関するアラートを送信するために使用できます。このモデルの目的は、このようなアラートに基づいて、ユーザーへの通知の生成をサポートしたり、他のアクションをトリガすることです。アラートは特定の状況によって生成されます。アラートの主な特徴は、それが予測可能ではなく、反復的なデータではないということです。つまり、アラートは、事故や高レベルの汚染物質の測定値である可能性もあれば、患者の転倒や反対方向に走行する車である可能性もあります。  コンテキストデータの例としては、アラートの種類（交通、天候、セキュリティ、汚染など）、重大度、場所などがあります。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+このエンティティはアラートをモデル化し、交通渋滞、事故、気象条件、汚染物質の多寡などに関連するアラートを送信するために使用される可能性がある。このモデルの目的は、そのようなアラートに基づいて、ユーザーへの通知の生成や他のアクションのトリガーをサポートすることです。アラートは、特定の状況によって生成されます。アラートの主な特徴は、予測不可能であり、繰り返し発生するデータではないことです。つまり、アラートは、事故や高レベルの汚染物質の測定値である可能性があり、さらに、患者の転倒や反対方向に走行する車である可能性もあります。  コンテキストデータの例としては、アラートの種類（交通、天候、セキュリティ、汚染など）、重大度、位置などがあります。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Alert:    
@@ -324,70 +326,70 @@ Alert:
     subCategory:    
       anyOf:    
         - enum:    
-            - trafficJam    
+            - airPollution    
+            - assault    
+            - asthmaAttack    
+            - avalancheRisk    
+            - bacteria    
+            - badSeaState    
+            - bikerOnRoad    
+            - buildingFire    
+            - bumpedPatient    
             - carAccident    
-            - carWrongDirection    
             - carStopped    
+            - carWrongDirection    
+            - coastalEvent    
+            - civilDisorder    
+            - coldWave    
+            - crowdRisk    
+            - earthquake    
+            - fallenPatient    
+            - fertilisation    
+            - fireRisk    
+            - flood    
+            - floodRisk    
+            - fog    
+            - forestFire    
+            - fungus    
+            - hazardOnRoad    
+            - heartAttack    
+            - heatWave    
+            - highAtmosphericPressure    
+            - highHumidity    
+            - highTemperature    
+            - hurricane    
+            - ice    
+            - injuredBiker    
+            - insect    
+            - irrigation    
+            - lowAtmosphericPressure    
+            - lowHumidity    
+            - lowTemperature    
+            - microbe    
+            - mite    
+            - nematodes    
+            - noxiousWeed    
+            - pedestrianOnRoad    
+            - pollenConcentration    
             - pothole    
+            - rainfall    
             - roadClosed    
             - roadWorks    
-            - hazardOnRoad    
-            - injuredBiker    
-            - pedestrianOnRoad    
-            - bikerOnRoad    
-            - tramApproaching    
-            - crowdRisk    
-            - flood    
-            - tsunami    
-            - coastalEvent    
-            - earthquake    
-            - rainfall    
-            - highTemperature    
-            - lowTemperature    
-            - lowHumidity    
-            - highHumidity    
-            - highAtmosphericPressure    
-            - losAtmosphericPressure    
-            - heatWave    
-            - coldWave    
-            - ice    
-            - snow    
-            - wind    
-            - fog    
-            - tornado    
-            - tropicalCyclone    
-            - hurricane    
-            - snow/ice    
-            - badSeaState    
-            - thunderstorms    
-            - fireRisk    
-            - avalancheRisk    
-            - floodRisk    
-            - airPollution    
-            - waterPollution    
-            - pollenConcentration    
-            - asthmaAttack    
-            - bumpedPatient    
-            - fallenPatient    
-            - heartAttack    
-            - suspiciousAction    
             - robbery    
-            - assault    
-            - civilDisorder    
-            - buildingFire    
-            - forestFire    
-            - noxiousWeed    
-            - snail    
-            - insect    
             - rodent    
-            - bacteria    
-            - microbe    
-            - fungus    
-            - mite    
+            - snail    
+            - snow    
+            - snow/ice    
+            - suspiciousAction    
+            - thunderstorms    
+            - tornado    
+            - trafficJam    
+            - tramApproaching    
+            - tropicalCyclone    
+            - tsunami    
             - virus    
-            - nematodes    
-            - irrigation    
-            - fertilisation    
+            - waterPollution    
+            - wind    
         - description: 'Property. Weather categories. Enum:'' avalanches,coastalEvent, coldWave, flood, fog, forestFire, heatWave, highTemperature, hurricane, ice, lowTemperature, rainfall, rain_flood, snow, snow_ice, thunderstorms, tornado, tropicalCyclone, tsunami, wind'''    
           enum:    
             - avalanches    
@@ -410,6 +412,7 @@ Alert:
             - tropicalCyclone    
             - tsunami    
             - wind    
+          type: string    
       description: 'Describe the sub category of alert. Enum:''trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, avalancheRisk, floodRisk, airPollution, waterPollution, pollenConcentration, asthmaAttack, bumpedPatient, fallenPatient, heartAttack, suspiciousAction, robbery, assault, civilDisorder, buildingFire, forestFire, noxiousWeed, snail, insect, rodent, bacteria, microbe, fungus,mite, virus, nematodes, irrigation, fertilisation'    
       type: string    
       x-ngsi:    
@@ -447,12 +450,12 @@ Alert:
   x-license-url: https://github.com/smart-data-models/dataModel.Alert/blob/master/Alert/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Alert/alert/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## ペイロードの例  
-#### Alert NGSI-v2 key-valuesの例。  
-JSON-LD形式でkey-valuesとしてAlertを表示した例です。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### 警告 NGSI-v2 キー値の例  
+ここでは、AlertをJSON-LD形式でkey-valuesとした場合の例を示す。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Alert:1",  
@@ -471,8 +474,8 @@ Alert:
   "alertSource": "https://account.lab.fiware.org/users/8"  
 }  
 ```  
-#### 警告 NGSI-v2 正規化例  
-正規化されたJSON-LD形式のAlertの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### アラート NGSI-v2 正規化例  
+以下は、AlertをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "Alert:1",  
@@ -521,107 +524,106 @@ Alert:
   }  
 }  
 ```  
-#### 警告 NGSI-LDのキーバリューの例  
-JSON-LD形式でkey-valuesとしてAlertを表示した例です。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### 注意 NGSI-LD キー値の例  
+ここでは、AlertをJSON-LD形式でkey-valuesとした場合の例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Alert:Alert:1",  
-  "type": "Alert",  
-  "createdAt": "2019-06-06T12:06:06",  
-  "modifiedAt": "2019-06-07T12:07:06",  
-  "category": {  
-    "type": "Property",  
-    "value": "traffic"  
-  },  
-  "subCategory": {  
-    "type": "Property",  
-    "value": "trafficJam"  
-  },  
-  "validTo": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-01-02T10:25:55.00Z"  
-    }  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "The road is completely blocked for 3kms"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.712247222222222,  
-        40.423852777777775  
-      ]  
-    }  
-  },  
-  "dateIssued": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-01-02T09:25:55.00Z"  
-    }  
-  },  
-  "alertSource": {  
-    "type": "Property",  
-    "value": "https://account.lab.fiware.org/users/8"  
-  },  
-  "validFrom": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2017-01-02T09:25:55.00Z"  
-    }  
-  },  
-  "severity": {  
-    "type": "Property",  
-    "value": "high"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:Alert:Alert:1",  
+    "type": "Alert",  
+    "alertSource": {  
+        "type": "Property",  
+        "value": "https://account.lab.fiware.org/users/8"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": "traffic"  
+    },  
+    "createdAt": "2019-06-06T12:06:06",  
+    "dateIssued": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-01-02T09:25:55.00Z"  
+        }  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "The road is completely blocked for 3kms"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.712247222222222,  
+                40.423852777777775  
+            ]  
+        }  
+    },  
+    "modifiedAt": "2019-06-07T12:07:06",  
+    "severity": {  
+        "type": "Property",  
+        "value": "high"  
+    },  
+    "subCategory": {  
+        "type": "Property",  
+        "value": "trafficJam"  
+    },  
+    "validFrom": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-01-02T09:25:55.00Z"  
+        }  
+    },  
+    "validTo": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-01-02T10:25:55.00Z"  
+        }  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### 警報 NGSI-LD 正規化例  
-正規化されたJSON-LD形式のAlertの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### 警報NGSI-LD正規化例  
+以下は、AlertをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "alertSource": "https://account.lab.fiware.org/users/8",  
-  "category": "traffic",  
-  "createdAt": "2019-06-06T12:06:06",  
-  "dateIssued": {  
-    "@type": "DateTime",  
-    "@value": "2017-01-02T09:25:55.00Z"  
-  },  
-  "description": "The road is completely blocked for 3kms",  
-  "id": "urn:ngsi-ld:Alert:Alert:1",  
-  "location": {  
-    "coordinates": [  
-      -3.712247222222222,  
-      40.423852777777775  
-    ],  
-    "type": "Point"  
-  },  
-  "modifiedAt": "2019-06-07T12:07:06",  
-  "severity": "high",  
-  "subCategory": "trafficJam",  
-  "type": "Alert",  
-  "validFrom": {  
-    "@type": "DateTime",  
-    "@value": "2017-01-02T09:25:55.00Z"  
-  },  
-  "validTo": {  
-    "@type": "DateTime",  
-    "@value": "2017-01-02T10:25:55.00Z"  
-  }  
+    "id": "urn:ngsi-ld:Alert:Alert:1",  
+    "type": "Alert",  
+    "alertSource": "https://account.lab.fiware.org/users/8",  
+    "category": "traffic",  
+    "createdAt": "2019-06-06T12:06:06",  
+    "dateIssued": {  
+        "@type": "DateTime",  
+        "@value": "2017-01-02T09:25:55.00Z"  
+    },  
+    "description": "The road is completely blocked for 3kms",  
+    "location": {  
+        "coordinates": [  
+            -3.712247222222222,  
+            40.423852777777775  
+        ],  
+        "type": "Point"  
+    },  
+    "modifiedAt": "2019-06-07T12:07:06",  
+    "severity": "high",  
+    "subCategory": "trafficJam",  
+    "validFrom": {  
+        "@type": "DateTime",  
+        "@value": "2017-01-02T09:25:55.00Z"  
+    },  
+    "validTo": {  
+        "@type": "DateTime",  
+        "@value": "2017-01-02T10:25:55.00Z"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
