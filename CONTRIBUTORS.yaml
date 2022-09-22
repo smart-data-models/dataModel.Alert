@@ -1,30 +1,30 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
--
- name: Jose M.
- surname: Cantera
- mail: jmcanterafonseca4github@gmail.com
- organization: CanteraFonseca.EU
- project: 
- comments: 
--
- name: Dmitrii
- surname: Demin
- mail: mail@demin.co
- organization: 
- project: 
- comments: 
--
- name: Jason
- surname: Fox
- mail:
- organization: FIWARE Foundation 
- project: 
- comments: 
--
- name: Nikos
- surname: Kalatzis
- mail: nikosk@cn.ntua.gr
- organization: Neuropublic S.A. & NTUA
- project: 
- comments: 
+- name: Jose M.
+  surname: Cantera
+  mail: jmcanterafonseca4github@gmail.com
+  organization: CanteraFonseca.EU
+  project: 
+  comments: 
+  year: 2022
+- name: Dmitrii
+  surname: Demin
+  mail: mail@demin.co
+  organization: 
+  project: 
+  comments: 
+  year: 2022
+- name: Jason
+  surname: Fox
+  mail: 
+  organization: FIWARE Foundation
+  project: 
+  comments: 
+  year: 2022
+- name: Nikos
+  surname: Kalatzis
+  mail: nikosk@cn.ntua.gr
+  organization: Neuropublic S.A. & NTUA
+  project: 
+  comments: 
+  year: 2022
