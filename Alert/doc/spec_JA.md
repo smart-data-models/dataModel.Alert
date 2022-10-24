@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティ注意喚起  
-==========  
+==========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Alert/blob/master/Alert/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな記述です。**指定された場所にいるユーザーまたはデバイスによって生成されたアラート**。  
 バージョン: 0.0.3  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alertSource`: 警報の発生源  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `category`: アラートのカテゴリ。Enum:'traffic, naturalDisaster, weather, environment, health, security, agriculture'.  - `data`: 取得したデータを含むペイロード。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateIssued`: ISO8601 UTC フォーマットで発行された日付と時刻。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `severity`: アラームの重要度  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `subCategory`: アラートのサブカテゴリを記述する。列挙する。'trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood,津波、海岸イベント、地震、降雨、高温、低温、熱波、寒波、氷、雪、風、霧、竜巻、熱帯サイクロン、ハリケーン、雪/氷。雷雨、火災リスク、雪崩リスク、洪水リスク、大気汚染、水質汚濁、花粉濃度、喘息発作、患者との接触、患者の転落、心臓発作、不審行為、強盗、暴行、市民混乱、建物火災、森林火災、有害草、かたつむり、虫、齧歯類、細菌、微生物、真菌、ダニ、ウイルス、線虫、潅水、受精  - `type`: NGSI Entityタイプ。Alertでなければならない。  - `validFrom`: ISO8601形式で表したこの予報の有効期間の開始日  - `validTo`: この予報のISO8601フォーマットとしての有効期間の終了日    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alertSource[*]`: アラートの発信元  . Model: [http://schema.org/URL.](http://schema.org/URL.)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[string]`: アラートのカテゴリ。Enum:'traffic, naturalDisaster, weather, environment, health, security, agriculture'.  - `data[object]`: 取得したデータを含むペイロード。  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateIssued[string]`: ISO8601 UTC フォーマットで発行された日付と時刻。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `severity[string]`: アラームの重要度  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `subCategory[string]`: アラートのサブカテゴリを記述する。列挙する。'trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood,津波、海岸イベント、地震、降雨、高温、低温、熱波、寒波、氷、雪、風、霧、竜巻、熱帯サイクロン、ハリケーン、雪/氷。雷雨、火災リスク、雪崩リスク、洪水リスク、大気汚染、水質汚濁、花粉濃度、喘息発作、患者との接触、患者の転落、心臓発作、不審行為、強盗、暴行、市民混乱、建物火災、森林火災、有害草、かたつむり、虫、齧歯類、細菌、微生物、真菌、ダニ、ウイルス、線虫、潅水、受精  - `type[string]`: NGSI Entityタイプ。Alertでなければならない。  - `validFrom[string]`: ISO8601形式で表したこの予報の有効期間の開始日  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `validTo[string]`: ISO8601形式でのこの予報の有効期間の終了日  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `alertSource`  - `category`  - `dateIssued`  - `id`  - `type`    
+- `alertSource`  - `category`  - `dateIssued`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 このエンティティはアラートをモデル化し、交通渋滞、事故、気象条件、汚染物質の多寡などに関連するアラートを送信するために使用される可能性がある。このモデルの目的は、そのようなアラートに基づいて、ユーザーへの通知の生成や他のアクションのトリガーをサポートすることです。アラートは、特定の状況によって生成されます。アラートの主な特徴は、予測不可能であり、繰り返し発生するデータではないことです。つまり、アラートは、事故や高レベルの汚染物質の測定値である可能性があり、さらに、患者の転倒や反対方向に走行する車である可能性もあります。  コンテキストデータの例としては、アラートの種類（交通、天候、セキュリティ、汚染など）、重大度、位置などがあります。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Alert:    
@@ -453,9 +466,14 @@ Alert:
   x-version: 0.0.3    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### 警告 NGSI-v2 キー値の例  
 ここでは、AlertをJSON-LD形式でkey-valuesとした場合の例を示す。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Alert:1",  
@@ -474,8 +492,10 @@ Alert:
   "alertSource": "https://account.lab.fiware.org/users/8"  
 }  
 ```  
+</details>  
 #### アラート NGSI-v2 正規化例  
 以下は、AlertをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Alert:1",  
@@ -524,8 +544,10 @@ Alert:
   }  
 }  
 ```  
+</details>  
 #### 注意 NGSI-LD キー値の例  
 ここでは、AlertをJSON-LD形式でkey-valuesとした場合の例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Alert:Alert:1",  
@@ -589,8 +611,10 @@ Alert:
     ]  
 }  
 ```  
+</details>  
 #### 警報NGSI-LD正規化例  
 以下は、AlertをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Alert:Alert:1",  
@@ -622,8 +646,17 @@ Alert:
         "@value": "2017-01-02T10:25:55.00Z"  
     },  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
