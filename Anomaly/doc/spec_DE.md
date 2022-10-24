@@ -1,15 +1,31 @@
-Entität: Anomalie  
-=================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: Anomalie  
+=================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Alert/blob/master/Anomaly/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung einer Anomalie.**  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Globale Beschreibung: **Diese Einheit enthält eine harmonisierte Beschreibung einer Anomalie**.  
+Version: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `anomalousProperty`: Die controlledProperty (des Geräts), in der die Anomalie erkannt wurde  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateDetected`: Das Datum und die Uhrzeit, zu der die Anomalie erstmals erkannt wurde  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `detectedBy`: Die ID des Geräts, bei dem die Anomalie erkannt wurde  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `thresholdBreach`: Beschreibung einer beobachteten Schwellenwertverletzung, die zur Erkennung einer Anomalie beigetragen hat  - `type`: NGSI-LD-Entitätstyp. Es muss Anomalie sein    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `anomalousProperty[string]`: Die controlledProperty (des Geräts), in der die Anomalie entdeckt wurde  . Model: [http://schema.org/Text](http://schema.org/Text)- `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateDetected[string]`: Das Datum und die Uhrzeit, zu der die Anomalie zum ersten Mal entdeckt wurde  . Model: [http://schema.org/DateTime](http://schema.org/DateTime)- `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `detectedBy[string]`: Die ID des Geräts, bei dem die Anomalie entdeckt wurde  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `thresholdBreach[array]`: Beschreibung einer beobachteten Schwellenwertverletzung, die zur Erkennung einer Anomalie beigetragen hat  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-LD Entitätstyp. Es muss Anomalie sein  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `anomalousProperty`  - `dateDetected`  - `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
+- `anomalousProperty`  - `dateDetected`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Anomaly:    
@@ -36,45 +52,61 @@ Anomaly:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     anomalousProperty:    
       description: 'The controlledProperty (of the device) in which the anomaly was detected'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/Text    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateDetected:    
       description: 'The date and time at which the anomaly was first detected'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: http://schema.org/DateTime    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     detectedBy:    
       description: 'The ID of the device at which the anomaly was detected'    
       format: uri    
-      type: Relationship    
+      type: string    
+      x-ngsi:    
+        type: Relationship    
     id:    
       anyOf: &anomaly_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -86,7 +118,8 @@ Anomaly:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -238,16 +271,21 @@ Anomaly:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *anomaly_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -258,50 +296,69 @@ Anomaly:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     thresholdBreach:    
       description: 'Description of an observed threshold breach that contributed to detection of an anomaly'    
-      properties:    
-        dateObserved:    
-          description: 'Property. Model:''http://schema.org/DateTime''. A sub-property of the Property ''thresholdBreach''. The date and time at which the threshold breach was observed'    
-          type: string    
-        measuredValue:    
-          description: 'Property. Model:''http://schema.org/Number''. A sub-property of the Property ''thresholdBreach''. The value measured for the corresponding device and controlled property'    
-          type: number    
-        thresholdType:    
-          description: 'Property. Model:''https://schema.org/Text''. A sub-property of the Property ''thresholdBreach''. The type of the threshold that was breached'    
-          enum:    
-            - UPPER    
-            - LOWER    
-          type: string    
-        thresholdValue:    
-          description: 'Property. Model:''https://schema.org/Number''. A sub-property of the Property ''thresholdBreach''. The value of the threshold that was breached'    
-          type: number    
-      type: Property    
+      items:    
+        properties:    
+          dateObserved:    
+            description: 'Property. Model:''http://schema.org/DateTime''. A sub-property of the Property ''thresholdBreach''. The date and time at which the threshold breach was observed'    
+            type: string    
+          measuredValue:    
+            description: 'Property. Model:''http://schema.org/Number''. A sub-property of the Property ''thresholdBreach''. The value measured for the corresponding device and controlled property'    
+            type: number    
+          thresholdType:    
+            description: 'Property. Model:''https://schema.org/Text''. A sub-property of the Property ''thresholdBreach''. The type of the threshold that was breached'    
+            enum:    
+              - UPPER    
+              - LOWER    
+            type: string    
+          thresholdValue:    
+            description: 'Property. Model:''https://schema.org/Number''. A sub-property of the Property ''thresholdBreach''. The value of the threshold that was breached'    
+            type: number    
+        type: object    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It has to be Anomaly'    
       enum:    
         - Anomaly    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
     - anomalousProperty    
     - dateDetected    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Alert/blob/master/Anomaly/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/incubated/Anomaly/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
-#### Anomalie NGSI-v2 Schlüssel-Werte Beispiel  
-Hier ist ein Beispiel für eine Anomalie im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+#### Anomalie NGSI-v2 Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für eine Anomalie im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "1863179e-3768-4480-9167-ff21f870dd19",  
+  "id": "urn:ngsi-ld:1863179e-3768-4480-9167-ff21f870dd19",  
   "type": "Anomaly",  
   "detectedBy": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20",  
   "anomalousProperty": "Pressure",  
@@ -311,26 +368,28 @@ Anomaly:
       "dateObserved": "2021-01-14T15:30:00Z",  
       "measuredValue": 18.91,  
       "thresholdType": "LOWER",  
-      "thresholdValue": "20"  
+      "thresholdValue": 20  
     },  
     {  
-      "value": "2021-01-14T15:45:00Z",  
+      "dateObserved": "2021-01-14T15:45:00Z",  
       "measuredValue": 18.91,  
       "thresholdType": "LOWER",  
-      "thresholdValue": "20"  
+      "thresholdValue": 20  
     }  
   ]  
 }  
 ```  
+</details>  
 #### Anomalie NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für eine Anomalie im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine Anomalie im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "1863179e-3768-4480-9167-ff21f870dd19",  
+  "id": "urn:ngsi-ld:1863179e-3768-4480-9167-ff21f870dd19",  
   "type": "Anomaly",  
   "detectedBy": {  
     "type": "Relationship",  
-    "object": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
+    "value": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
   },  
   "anomalousProperty": {  
     "type": "Text",  
@@ -340,123 +399,110 @@ Anomaly:
     "type": "DateTime",  
     "value": "2021-01-14T15:45:00Z"  
   },  
-  "thresholdBreach": [  
-    {  
-      "type": "StructuredValue",  
-      "value": {  
-        "dateObserved": {  
-          "type": "DateTime",  
-          "value": "2021-01-14T15:30:00Z"  
-        },  
-        "measuredValue": {  
-          "type": "Number",  
-          "value": 18.91  
-        },  
-        "thresholdType": {  
-          "type": "Text",  
-          "value": "LOWER"  
-        },  
-        "thresholdValue": {  
-          "type": "Number",  
-          "value": 20  
-        }  
-      }  
-    },  
-    {  
-      "type": "StructuredValue",  
-      "value": {  
-        "dateObserved": {  
-          "type": "DateTime",  
-          "value": "2021-01-14T15:45:00Z"  
-        },  
-        "measuredValue": {  
-          "type": "Number",  
-          "value": 18.91  
-        },  
-        "thresholdType": {  
-          "type": "Text",  
-          "value": "LOWER"  
-        },  
-        "thresholdValue": {  
-          "type": "Number",  
-          "value": 20  
-        }  
-      }  
-    }  
-  ]  
-}  
-```  
-#### Anomalie NGSI-LD-Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für eine Anomalie im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
-```json  
-{  
-  "id": "urn:ngsi-ld:Anomaly:1863179e-3768-4480-9167-ff21f870dd19",  
-  "type": "Anomaly",  
-  "createdAt": "2021-01-14T15:45:00Z",  
-  "modifiedAt": "2021-01-14T15:45:00Z",  
-  "detectedBy": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20",  
-  "anomalousProperty": "Pressure",  
-  "dateDetected": "2021-01-14T15:45:00Z",  
-  "thresholdBreach": [  
-    {  
-      "dateObserved": "2021-01-14T15:30:00Z",  
-      "measuredValue": "18.91",  
-      "thresholdType": "LOWER",  
-      "thresholdValue": 20  
-    },  
-    {  
-      "dateObserved": "2021-01-14T15:45:00Z",  
-      "measuredValue": "18.91",  
-      "thresholdType": "LOWER",  
-      "thresholdValue": 20  
-    }  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
-}  
-```  
-#### Anomalie NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für eine Anomalie im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
-```json  
-{  
-  "id": "1863179e-3768-4480-9167-ff21f870dd19",  
-  "type": "Anomaly",  
-  "detectedBy": {  
-    "type": "Property",  
-    "value": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
-  },  
-  "anomalousProperty": {  
-    "type": "Property",  
-    "value": "Pressure"  
-  },  
-  "dateDetected": {  
-    "type": "Property",  
-    "value": "2021-01-14T15:45:00Z"  
-  },  
-  "thresholdBreach": [  
-    {  
-      "type": "Property",  
-      "value": {  
+  "thresholdBreach": {  
+    "type": "StructuredValue",  
+    "value": [  
+      {  
         "dateObserved": "2021-01-14T15:30:00Z",  
-        "measuredValue": "18.91",  
+        "measuredValue": 18.91,  
         "thresholdType": "LOWER",  
-        "thresholdValue": "20"  
-      }  
-    },  
-    {  
-      "type": "Property",  
-      "value": {  
+        "thresholdValue": 20  
+      },  
+      {  
         "dateObserved": "2021-01-14T15:45:00Z",  
-        "measuredValue": "18.91",  
+        "measuredValue": 18.91,  
         "thresholdType": "LOWER",  
-        "thresholdValue": "20"  
+        "thresholdValue": 20  
       }  
-    }  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    ]  
+  }  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+</details>  
+#### Anomalie NGSI-LD Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für eine Anomalie im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:Anomaly:1863179e-3768-4480-9167-ff21f870dd19",  
+    "type": "Anomaly",  
+    "anomalousProperty": "Pressure",  
+    "createdAt": "2021-01-14T15:45:00Z",  
+    "dateDetected": "2021-01-14T15:45:00Z",  
+    "detectedBy": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20",  
+    "modifiedAt": "2021-01-14T15:45:00Z",  
+    "thresholdBreach": [  
+        {  
+            "dateObserved": "2021-01-14T15:30:00Z",  
+            "measuredValue": 18.91,  
+            "thresholdType": "LOWER",  
+            "thresholdValue": 20  
+        },  
+        {  
+            "dateObserved": "2021-01-14T15:45:00Z",  
+            "measuredValue": 18.91,  
+            "thresholdType": "LOWER",  
+            "thresholdValue": 20  
+        }  
+    ],  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Alert/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/context.jsonld"  
+    ]  
+}  
+```  
+</details>  
+#### Anomalie NGSI-LD normalisiert Beispiel  
+Hier ist ein Beispiel für eine Anomalie im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:1863179e-3768-4480-9167-ff21f870dd19",  
+    "type": "Anomaly",  
+    "anomalousProperty": {  
+        "type": "Property",  
+        "value": "Pressure"  
+    },  
+    "dateDetected": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-01-14T15:45:00Z"  
+        }  
+    },  
+    "detectedBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
+    },  
+    "thresholdBreach": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "dateObserved": "2021-01-14T15:30:00Z",  
+                "measuredValue": 18.91,  
+                "thresholdType": "LOWER",  
+                "thresholdValue": 20  
+            },  
+            {  
+                "dateObserved": "2021-01-14T15:45:00Z",  
+                "measuredValue": 18.91,  
+                "thresholdType": "LOWER",  
+                "thresholdValue": 20  
+            }  
+        ]  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Alert/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/context.jsonld"  
+    ]  
+}  
+```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
