@@ -1,15 +1,31 @@
-エンティティアノマリー  
-===========  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティアノマリー  
+===========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Alert/blob/master/Anomaly/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティには、異常に関する統一された記述が含まれています。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**このエンティティは、異常の調和された記述を含んでいる**。  
+バージョン: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `anomalousProperty`: 異常が検出された（デバイスの）controlledProperty  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateDetected`: 異常が最初に検出された日付と時間  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `detectedBy`: 異常が検出された機器のID  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `thresholdBreach`: 異常の検出に貢献した、観測された閾値違反の記述  - `type`: NGSI-LD エンティティタイプ。アノマリーでなければならない    
-必須項目  
-- `anomalousProperty`  - `dateDetected`  - `id`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `anomalousProperty[string]`: 異常が検出された（機器の）controlledProperty  . Model: [http://schema.org/Text](http://schema.org/Text)- `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateDetected[string]`: 異常が最初に検出された日付と時刻  . Model: [http://schema.org/DateTime](http://schema.org/DateTime)- `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `detectedBy[string]`: 異常が検出された端末のID  - `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `thresholdBreach[array]`: 異常の検出に貢献した、観測された閾値の違反の説明  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-LDのエンティティタイプ。アノマリーでなければならない  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `anomalousProperty`  - `dateDetected`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Anomaly:    
@@ -332,9 +348,14 @@ Anomaly:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### Anomaly NGSI-v2 key-values Example  
-Anomalyをkey-valuesとしてJSON-LD形式で出力した例です。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### 異常 NGSI-v2 キー値例  
+AnomalyをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:1863179e-3768-4480-9167-ff21f870dd19",  
@@ -358,8 +379,10 @@ Anomaly:
   ]  
 }  
 ```  
-#### 異常 NGSI-v2 正規化例  
-ここでは、正規化されたJSON-LD形式のAnomalyの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### 異常値 NGSI-v2 正規化例  
+Anomalyを正規化したJSON-LD形式の例です。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:1863179e-3768-4480-9167-ff21f870dd19",  
@@ -395,77 +418,91 @@ Anomaly:
   }  
 }  
 ```  
-#### 異常 NGSI-LD のキーバリューの例  
-Anomalyをkey-valuesとしてJSON-LD形式で出力した例です。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### 異常 NGSI-LD キー値の例  
+AnomalyをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Anomaly:1863179e-3768-4480-9167-ff21f870dd19",  
-  "type": "Anomaly",  
-  "createdAt": "2021-01-14T15:45:00Z",  
-  "modifiedAt": "2021-01-14T15:45:00Z",  
-  "detectedBy": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20",  
-  "anomalousProperty": "Pressure",  
-  "dateDetected": "2021-01-14T15:45:00Z",  
-  "thresholdBreach": [  
-    {  
-      "dateObserved": "2021-01-14T15:30:00Z",  
-      "measuredValue": 18.91,  
-      "thresholdType": "LOWER",  
-      "thresholdValue": 20  
-    },  
-    {  
-      "dateObserved": "2021-01-14T15:45:00Z",  
-      "measuredValue": 18.91,  
-      "thresholdType": "LOWER",  
-      "thresholdValue": 20  
-    }  
-  ],  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Alert/context.jsonld"  
-  ]  
-}  
-```  
-#### 異常 NGSI-LD 正規化例  
-ここでは、正規化されたJSON-LD形式のAnomalyの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
-```json  
-{  
-  "id": "urn:ngsi-ld:1863179e-3768-4480-9167-ff21f870dd19",  
-  "type": "Anomaly",  
-  "detectedBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
-  },  
-  "anomalousProperty": {  
-    "type": "Property",  
-    "value": "Pressure"  
-  },  
-  "dateDetected": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-01-14T15:45:00Z"  
-    }  
-  },  
-  "thresholdBreach": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "dateObserved": "2021-01-14T15:30:00Z",  
-        "measuredValue": 18.91,  
-        "thresholdType": "LOWER",  
-        "thresholdValue": 20  
-      },  
-      {  
-        "dateObserved": "2021-01-14T15:45:00Z",  
-        "measuredValue": 18.91,  
-        "thresholdType": "LOWER",  
-        "thresholdValue": 20  
-      }  
+    "id": "urn:ngsi-ld:Anomaly:1863179e-3768-4480-9167-ff21f870dd19",  
+    "type": "Anomaly",  
+    "anomalousProperty": "Pressure",  
+    "createdAt": "2021-01-14T15:45:00Z",  
+    "dateDetected": "2021-01-14T15:45:00Z",  
+    "detectedBy": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20",  
+    "modifiedAt": "2021-01-14T15:45:00Z",  
+    "thresholdBreach": [  
+        {  
+            "dateObserved": "2021-01-14T15:30:00Z",  
+            "measuredValue": 18.91,  
+            "thresholdType": "LOWER",  
+            "thresholdValue": 20  
+        },  
+        {  
+            "dateObserved": "2021-01-14T15:45:00Z",  
+            "measuredValue": 18.91,  
+            "thresholdType": "LOWER",  
+            "thresholdValue": 20  
+        }  
+    ],  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Alert/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/context.jsonld"  
     ]  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.Alert/context.jsonld"  
-  ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details>  
+#### 異常値 NGSI-LD 正規化例  
+Anomalyを正規化したJSON-LD形式の例です。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:1863179e-3768-4480-9167-ff21f870dd19",  
+    "type": "Anomaly",  
+    "anomalousProperty": {  
+        "type": "Property",  
+        "value": "Pressure"  
+    },  
+    "dateDetected": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-01-14T15:45:00Z"  
+        }  
+    },  
+    "detectedBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"  
+    },  
+    "thresholdBreach": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "dateObserved": "2021-01-14T15:30:00Z",  
+                "measuredValue": 18.91,  
+                "thresholdType": "LOWER",  
+                "thresholdValue": 20  
+            },  
+            {  
+                "dateObserved": "2021-01-14T15:45:00Z",  
+                "measuredValue": 18.91,  
+                "thresholdType": "LOWER",  
+                "thresholdValue": 20  
+            }  
+        ]  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.Alert/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Alert/master/context.jsonld"  
+    ]  
+}  
+```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
