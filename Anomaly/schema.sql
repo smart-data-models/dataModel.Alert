@@ -1,0 +1,3 @@
+/* (Beta) Export of data model Anomaly of the subject dataModel.Alert for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE Anomaly_type AS ENUM ('Anomaly');
+CREATE TABLE Anomaly (address json, alternateName text, anomalousProperty text, areaServed text, dataProvider text, dateCreated timestamp, dateDetected text, dateModified timestamp, description text, detectedBy text, id text, location json, name text, owner json, seeAlso json, source text, thresholdBreach json, type Anomaly_type);
