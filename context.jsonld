@@ -1,5 +1,7 @@
 {
     "@context": {
+        "Alert": "https://smartdatamodels.org/dataModel.Alert/Alert",
+        "Anomaly": "https://smartdatamodels.org/dataModel.Alert/Anomaly",
         "address": "https://smartdatamodels.org/address",
         "alertSource": "https://smartdatamodels.org/dataModel.Alert/alertSource",
         "alternateName": "https://smartdatamodels.org/alternateName",
