@@ -10,18 +10,28 @@
         "alternateName": "https://smartdatamodels.org/alternateName",
         "anomalousProperty": "https://smartdatamodels.org/dataModel.Alert/anomalousProperty",
         "areaServed": "https://smartdatamodels.org/areaServed",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
         "category": "https://smartdatamodels.org/dataModel.Alert/category",
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
         "data": "ngsi-ld:data",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
         "dateDetected": "https://smartdatamodels.org/dataModel.Alert/dateDetected",
         "dateIssued": "https://smartdatamodels.org/dataModel.Alert/dateIssued",
         "dateModified": "https://smartdatamodels.org/dateModified",
+        "dateObserved": "https://smartdatamodels.org/dateObserved",
         "description": "http://purl.org/dc/terms/description",
         "detectedBy": "https://smartdatamodels.org/dataModel.Alert/detectedBy",
         "district": "https://smartdatamodels.org/district",
         "id": "@id",
         "location": "ngsi-ld:location",
+        "measuredValue": "https://smartdatamodels.org/dataModel.Alert/measuredValue",
         "name": "https://smartdatamodels.org/name",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "owner": "https://smartdatamodels.org/owner",
@@ -34,8 +44,10 @@
         "streetNr": "https://smartdatamodels.org/streetNr",
         "subCategory": "https://smartdatamodels.org/dataModel.Alert/subCategory",
         "thresholdBreach": "https://smartdatamodels.org/dataModel.Alert/thresholdBreach",
+        "thresholdType": "https://smartdatamodels.org/dataModel.Alert/thresholdType",
+        "thresholdValue": "https://smartdatamodels.org/dataModel.Alert/thresholdValue",
         "type": "@type",
-        "validFrom": "https://smartdatamodels.org/dataModel.Alert/validFrom",
+        "validFrom": "https://smartdatamodels.org/validFrom",
         "validTo": "https://smartdatamodels.org/dataModel.Alert/validTo"
     }
 }
