@@ -1,31 +1,58 @@
 {
     "id": "urn:ngsi-ld:Alert:Alert:1",
     "type": "Alert",
-    "alertSource": "https://account.lab.fiware.org/users/8",
-    "category": "traffic",
+    "alertSource": {
+        "type": "Property",
+        "value": "https://account.lab.fiware.org/users/8"
+    },
+    "category": {
+        "type": "Property",
+        "value": "traffic"
+    },
     "createdAt": "2019-06-06T12:06:06",
     "dateIssued": {
-        "@type": "DateTime",
-        "@value": "2017-01-02T09:25:55.00Z"
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2017-01-02T09:25:55.00Z"
+        }
     },
-    "description": "The road is completely blocked for 3kms",
+    "description": {
+        "type": "Property",
+        "value": "The road is completely blocked for 3kms"
+    },
     "location": {
-        "coordinates": [
-            -3.712247222222222,
-            40.423852777777775
-        ],
-        "type": "Point"
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -3.712247222222222,
+                40.423852777777775
+            ]
+        }
     },
     "modifiedAt": "2019-06-07T12:07:06",
-    "severity": "high",
-    "subCategory": "trafficJam",
+    "severity": {
+        "type": "Property",
+        "value": "high"
+    },
+    "subCategory": {
+        "type": "Property",
+        "value": "trafficJam"
+    },
     "validFrom": {
-        "@type": "DateTime",
-        "@value": "2017-01-02T09:25:55.00Z"
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2017-01-02T09:25:55.00Z"
+        }
     },
     "validTo": {
-        "@type": "DateTime",
-        "@value": "2017-01-02T10:25:55.00Z"
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2017-01-02T10:25:55.00Z"
+        }
     },
     "@context": [
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
