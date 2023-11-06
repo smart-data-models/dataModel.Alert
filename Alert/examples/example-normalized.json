@@ -10,9 +10,11 @@
     "value": "2019-06-07T12:07:06"
   },
   "category": {
+    "type": "Text",
     "value": "traffic"
   },
   "subCategory": {
+    "type": "Text",
     "value": "trafficJam"
   },
   "validTo": {
@@ -20,6 +22,7 @@
     "value": "2017-01-02T10:25:55.00Z"
   },
   "description": {
+    "type": "Text",
     "value": "The road is completely blocked for 3kms"
   },
   "location": {
@@ -34,6 +37,7 @@
     "value": "2017-01-02T09:25:55.00Z"
   },
   "alertSource": {
+    "type": "Text",
     "value": "https://account.lab.fiware.org/users/8"
   },
   "validFrom": {
@@ -41,6 +45,7 @@
     "value": "2017-01-02T09:25:55.00Z"
   },
   "severity": {
+    "type": "Text",
     "value": "high"
   }
 }
