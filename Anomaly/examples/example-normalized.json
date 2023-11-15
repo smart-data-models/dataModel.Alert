@@ -2,7 +2,7 @@
   "id": "urn:ngsi-ld:1863179e-3768-4480-9167-ff21f870dd19",
   "type": "Anomaly",
   "detectedBy": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:Device:1863179e-3868-4480-3496-jf21f090dd20"
   },
   "anomalousProperty": {
