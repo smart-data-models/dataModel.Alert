@@ -9,7 +9,6 @@
         "type": "Property",
         "value": "traffic"
     },
-    "createdAt": "2019-06-06T12:06:06",
     "dateIssued": {
         "type": "Property",
         "value": {
@@ -31,7 +30,6 @@
             ]
         }
     },
-    "modifiedAt": "2019-06-07T12:07:06",
     "severity": {
         "type": "Property",
         "value": "high"
