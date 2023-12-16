@@ -3,7 +3,6 @@
   "type": "Alert",
   "alertSource": "https://account.lab.fiware.org/users/8",
   "category": "traffic",
-  "createdAt": "2019-06-06T12:06:06",
   "dateIssued": "2017-01-02T09:25:55.00Z",
   "description": "The road is completely blocked for 3kms",
   "location": {
@@ -13,7 +12,6 @@
     ],
     "type": "Point"
   },
-  "modifiedAt": "2019-06-07T12:07:06",
   "severity": "high",
   "subCategory": "trafficJam",
   "validFrom": "2017-01-02T09:25:55.00Z",
